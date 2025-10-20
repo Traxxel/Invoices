@@ -1,0 +1,10 @@
+Erstelle ein Konzept in Form einer Markdown-Datei KONZEPT.md
+Ich möchte später durch eine KI eine WIndowsApp unter .net 8 erstellen lassen, in welche ich PDF-Rechnungen impoertieren kann. Per ML .net soll dann diese Rechnung ausgelesen werden und mittels Entity Framework in eine MSSQL-Server-DB gespeichert werden.
+Es sollen nur .net-Komponenten benutzt werden - keine Python-Scripte oder Ähnliches.
+Folgende Felder sollen in der Rechnung erkannt werden: Rechnungsnummer, Rechnungsdatum, Ersteller (Firma), Gesamtbeträge (Netto, MwSt, Brutto)
+Erläutere im Konzept auf, wie ich Trainingsdaten bereitstellen muss und die die ML trainiert werden muss. Es sollen später auch diese Funktionen umgesetzt werden, also beschreibe und definiere sie schon einmal: 
+- Import einer Rechnung
+- ML-Training mit weiteren Rechnungen
+- Rechnungs-Viewer (PDF vs. erkannte Daten) zur Prüfung.
+- Rechnungsdaten sollen in der DB abgelegt werden
+- PDFs sollen sinnvoll gespeichert werden (in einem Speicherverzeichnis mit Verweisesen darau in der DB)
