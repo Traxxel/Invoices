@@ -9,6 +9,7 @@
   
   <ItemGroup>
     <ProjectReference Include="..\Invoice.Application\Invoice.Application.csproj" />
+    <ProjectReference Include="..\Invoice.Infrastructure\Invoice.Infrastructure.csproj" />
   </ItemGroup>
   
   <ItemGroup>

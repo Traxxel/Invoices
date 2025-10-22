@@ -44,7 +44,7 @@
     <PackageReference Include="Serilog.Settings.Configuration" Version="8.0.0" />
     
     <!-- File System -->
-    <PackageReference Include="System.IO.Abstractions" Version="19.1.0" />
+    <PackageReference Include="System.IO.Abstractions" Version="19.1.1" />
   </ItemGroup>
 </Project>
 
