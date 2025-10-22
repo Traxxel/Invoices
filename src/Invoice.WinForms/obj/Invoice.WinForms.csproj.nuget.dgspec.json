@@ -202,6 +202,12 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "DevExpress.Win.Design": {
+              "target": "Package",
+              "version": "[25.1.5, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

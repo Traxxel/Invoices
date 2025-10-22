@@ -207,7 +207,7 @@ static class Program
         
         var host = CreateHostBuilder().Build();
         
-        Application.Run(host.Services.GetRequiredService<MainForm>());
+        Application.Run(host.Services.GetRequiredService<frmMain>());
     }
     
     private static IHostBuilder CreateHostBuilder()

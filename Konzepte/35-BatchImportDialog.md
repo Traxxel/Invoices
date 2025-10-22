@@ -16,7 +16,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Invoice.WinForms.Forms;
 
-public partial class BatchImportDialog : Form
+public partial class BatchImportDialog : XtraForm
 {
     private readonly IServiceProvider _serviceProvider;
     private readonly ILogger<BatchImportDialog> _logger;

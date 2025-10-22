@@ -15,7 +15,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Invoice.WinForms.Forms;
 
-public partial class SettingsForm : Form
+public partial class SettingsForm : XtraForm
 {
     private readonly IServiceProvider _serviceProvider;
     private readonly ILogger<SettingsForm> _logger;

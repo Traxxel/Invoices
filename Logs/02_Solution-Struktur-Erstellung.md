@@ -3,8 +3,11 @@
 ## Datum
 22. Oktober 2025
 
+## Status
+✅ **ABGESCHLOSSEN** - `01-Solution-Structure.md` → verschoben nach `Konzepte/done/`
+
 ## Aufgabe
-Erstellen der kompletten .NET 8 Solution-Struktur mit allen 4 Projekten gemäß dem Konzept in `01-Solution-Structure.md`.
+Erstellen der kompletten .NET 8 Solution-Struktur mit allen 4 Projekten gemäß dem Konzept in `done/01-Solution-Structure.md`.
 **Update:** Alle Projekte wurden anschließend von `InvoiceReader.*` zu `Invoice.*` umbenannt.
 
 ## Durchgeführte Aktionen
@@ -165,10 +168,58 @@ Nach der initialen Erstellung wurden alle Projekte von `InvoiceReader.*` zu `Inv
 - 0 Warnungen, 0 Fehler
 - Alle Projekt-Referenzen korrekt aufgelöst
 
+## DevExpress-Integration (22. Oktober 2025)
+
+Nach der Umbenennung wurde die UI-Strategie auf DevExpress-Komponenten festgelegt:
+
+### UI-Framework
+- ✅ **DevExpress Version 25.1.5** für alle WinForms-Controls
+- ✅ Hauptformular: **frmMain** (bereits vom Benutzer erstellt)
+- ✅ Alle Forms erben von `XtraForm` (statt `Form`)
+- ✅ Alle UserControls erben von `XtraUserControl`
+
+### DevExpress-Komponenten
+Folgende DevExpress-Komponenten werden verwendet:
+
+**Grids & Daten:**
+- `GridControl` + `GridView` statt `DataGridView`
+
+**Buttons & Controls:**
+- `SimpleButton` statt `Button`
+- `TextEdit` statt `TextBox`
+- `ComboBoxEdit` statt `ComboBox`
+- `CheckEdit` statt `CheckBox`
+- `SpinEdit` statt `NumericUpDown`
+- `LabelControl` statt `Label`
+- `ListBoxControl` statt `ListBox`
+- `ProgressBarControl` statt `ProgressBar`
+
+**Navigation & Menüs:**
+- `RibbonControl` für moderne Menüführung
+- `BarManager` für Toolbars
+- `BarButtonItem` für Ribbon-Buttons
+
+**PDF-Anzeige:**
+- `DevExpress.XtraPdfViewer.PdfViewer` für PDF-Darstellung
+
+### Aktualisierte Konzept-Dateien
+✅ `02-NuGet-Packages.md` - DevExpress-Pakete hinzugefügt
+✅ `33-MainForm.md` → `frmMain.md` mit DevExpress-Komponenten
+✅ `34-ImportDialog.md` - auf XtraForm und DevExpress-Controls umgestellt
+✅ `35-BatchImportDialog.md` - auf XtraForm umgestellt
+✅ `36-ReviewForm.md` - auf XtraForm umgestellt
+✅ `37-PDF-Viewer-Control.md` - DevExpress PdfViewer integriert
+✅ `38-Field-Editor-Control.md` - auf XtraUserControl umgestellt
+✅ `39-TrainingForm.md` - auf XtraForm umgestellt
+✅ `40-SettingsForm.md` - auf XtraForm umgestellt
+✅ `05-Dependency-Injection.md` - MainForm → frmMain
+✅ `KONZEPT_improved.md` - DevExpress-Hinweis hinzugefügt
+
 ## Hinweise
 
 - Dependency Injection Setup ist für Aufgabe 05 vorgesehen
-- MainForm wird in Aufgabe 33 erstellt
+- Hauptformular **frmMain** wurde bereits vom Benutzer erstellt
+- Alle zukünftigen UI-Komponenten verwenden **DevExpress** statt Standard-WinForms-Controls
 - Die Solution ist aktuell minimal, aber vollständig kompilierbar
 - Alle TODOs sind im Code mit Verweisen auf zukünftige Aufgaben markiert
 - Alle Projektnamen sind jetzt kürzer und prägnanter (Invoice statt InvoiceReader)

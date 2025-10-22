@@ -153,7 +153,9 @@ public record InvoiceDto(
 ```
 
 ## 17. WinForms‑Screens (Funktionale Anforderungen)
-- **MainForm:** Grid (Invoices), Suchfeld, Buttons: Import… | Batch‑Import… | Trainieren… | Einstellungen…
+**Hinweis:** Alle UI-Komponenten werden mit **DevExpress-Komponenten** (XtraGrid, XtraForm, SimpleButton, etc.) umgesetzt.
+
+- **frmMain:** XtraGrid (Invoices), Ribbon-Menu, Suchfeld, Buttons: Import… | Batch‑Import… | Trainieren… | Einstellungen…
 - **ImportDialog:** Dateipicker, Fortschritt, Ergebnis‑Summary (Ampel).
 - **ReviewForm:** PDF‑Panel (Seiten‑Navigation), Feld‑Editor, Top‑3 Kandidaten, „Speichern“.
 - **TrainingForm:** Grid (Seite, LineIndex, Text, Label‑DropDown), „Trainieren“, „Als aktiv setzen“.

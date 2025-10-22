@@ -202,7 +202,7 @@ public static class WinFormsServiceExtensions
     public static IServiceCollection AddWinFormsServices(this IServiceCollection services)
     {
         // Forms
-        services.AddTransient<MainForm>();
+        services.AddTransient<frmMain>();
         services.AddTransient<ImportDialog>();
         services.AddTransient<BatchImportDialog>();
         services.AddTransient<ReviewForm>();
@@ -242,7 +242,7 @@ static class Program
         var logger = host.Services.GetRequiredService<ILoggingService>();
         logger.LogInformation("Invoice Reader Application started");
 
-        Application.Run(host.Services.GetRequiredService<MainForm>());
+        Application.Run(host.Services.GetRequiredService<frmMain>());
     }
 
     private static IHostBuilder CreateHostBuilder()

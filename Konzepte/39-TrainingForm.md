@@ -16,7 +16,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Invoice.WinForms.Forms;
 
-public partial class TrainingForm : Form
+public partial class TrainingForm : XtraForm
 {
     private readonly IServiceProvider _serviceProvider;
     private readonly ILogger<TrainingForm> _logger;

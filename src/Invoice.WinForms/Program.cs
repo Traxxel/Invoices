@@ -12,8 +12,8 @@ static class Program
 
         // TODO: Dependency Injection Setup wird in Aufgabe 05 hinzugefügt
         // TODO: MainForm wird in späteren Aufgaben erstellt
-        // Application.Run(new MainForm());
-        
+        Application.Run(new frmMain());
+
         Application.Run();
     }
 }

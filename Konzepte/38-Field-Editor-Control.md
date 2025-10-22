@@ -15,7 +15,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Invoice.WinForms.Controls;
 
-public partial class FieldEditorControl : UserControl
+public partial class FieldEditorControl : XtraUserControl
 {
     private readonly IServiceProvider _serviceProvider;
     private readonly ILogger<FieldEditorControl> _logger;

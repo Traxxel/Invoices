@@ -68,7 +68,7 @@ Invoice.sln
 **Datei:** `src/Invoice.WinForms/Program.cs`
 - Standard WinForms Program.cs
 - Dependency Injection Setup
-- Application.Run mit MainForm
+- Application.Run mit frmMain
 
 ### 3. Application Projekt
 **Datei:** `src/Invoice.Application/Invoice.Application.csproj`

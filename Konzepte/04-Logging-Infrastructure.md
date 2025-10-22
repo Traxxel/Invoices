@@ -294,7 +294,7 @@ static class Program
         var logger = host.Services.GetRequiredService<ILoggingService>();
         logger.LogInformation("Invoice Reader Application started");
 
-        Application.Run(host.Services.GetRequiredService<MainForm>());
+        Application.Run(host.Services.GetRequiredService<frmMain>());
     }
 
     private static IHostBuilder CreateHostBuilder()

@@ -81,11 +81,14 @@ Alle erforderlichen NuGet-Pakete für die 4 Projekte gemäß Konzept definieren.
   </ItemGroup>
   
   <ItemGroup>
+    <!-- DevExpress WinForms Components -->
+    <PackageReference Include="DevExpress.Win.Design" Version="25.1.5" />
+    <PackageReference Include="DevExpress.Win.Grid" Version="25.1.5" />
+    <PackageReference Include="DevExpress.Win.Navigation" Version="25.1.5" />
+    <PackageReference Include="DevExpress.Win.PdfViewer" Version="25.1.5" />
+    
     <!-- WinForms Controls -->
     <PackageReference Include="System.Windows.Forms" Version="8.0.0" />
-    
-    <!-- PDF Viewer (optional) -->
-    <PackageReference Include="PdfiumViewer" Version="2.13.0" />
     
     <!-- Configuration -->
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
@@ -127,11 +130,17 @@ Alle erforderlichen NuGet-Pakete für die 4 Projekte gemäß Konzept definieren.
 - Testbare File System Operations
 - Abstraktion für File Storage
 
-### PdfiumViewer 2.13.0
-- Optional für PDF-Anzeige in WinForms
-- Native PDF-Rendering
+### DevExpress 25.1.5
+- Professionelle WinForms UI-Komponenten
+- **XtraGrid** für moderne Datenansicht (statt DataGridView)
+- **SimpleButton** für Buttons mit modernem Look
+- **XtraForm** als Basis für alle Forms
+- **PdfViewer** für PDF-Anzeige
+- **Navigation Controls** für Ribbon/Menu
 
 ## Wichtige Hinweise
+- **DevExpress-Komponenten** werden für alle UI-Controls verwendet
+- Einheitliches modernes Look & Feel durch DevExpress-Suite
 - Alle Pakete auf neueste stabile Versionen für .NET 8
 - Keine Beta/Preview Versionen
 - Nur .NET-native Pakete (keine Python/External Services)

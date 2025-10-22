@@ -2,7 +2,7 @@
 
 ## Ziel
 
-ImportDialog für die Auswahl von PDF-Dateien und Anzeige des Import-Fortschritts.
+ImportDialog für die Auswahl von PDF-Dateien und Anzeige des Import-Fortschritts mit DevExpress-Komponenten.
 
 ## 1. ImportDialog Interface
 
@@ -13,27 +13,28 @@ using Invoice.Application.Interfaces;
 using Invoice.Application.DTOs;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using DevExpress.XtraEditors;
 
 namespace Invoice.WinForms.Forms;
 
-public partial class ImportDialog : Form
+public partial class ImportDialog : XtraForm
 {
     private readonly IServiceProvider _serviceProvider;
     private readonly ILogger<ImportDialog> _logger;
     private readonly IImportInvoiceUseCase _importInvoiceUseCase;
 
-    // UI Controls
+    // DevExpress UI Controls
     private OpenFileDialog _fileDialog;
-    private ProgressBar _progressBar;
-    private Label _statusLabel;
-    private ListBox _fileListBox;
-    private Button _addFilesButton;
-    private Button _removeFileButton;
-    private Button _importButton;
-    private Button _cancelButton;
-    private CheckBox _checkDuplicatesCheckBox;
-    private CheckBox _requireManualReviewCheckBox;
-    private NumericUpDown _confidenceThresholdNumericUpDown;
+    private DevExpress.XtraEditors.ProgressBarControl _progressBar;
+    private LabelControl _statusLabel;
+    private ListBoxControl _fileListBox;
+    private SimpleButton _addFilesButton;
+    private SimpleButton _removeFileButton;
+    private SimpleButton _importButton;
+    private SimpleButton _cancelButton;
+    private CheckEdit _checkDuplicatesCheckBox;
+    private CheckEdit _requireManualReviewCheckBox;
+    private SpinEdit _confidenceThresholdNumericUpDown;
 
     // Data
     private List<string> _selectedFiles;

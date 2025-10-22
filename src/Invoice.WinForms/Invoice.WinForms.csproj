@@ -6,6 +6,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="DevExpress.Win.Design" Version="25.1.5" />
+  </ItemGroup>
   
   <ItemGroup>
     <ProjectReference Include="..\Invoice.Application\Invoice.Application.csproj" />

@@ -16,7 +16,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Invoice.WinForms.Forms;
 
-public partial class ReviewForm : Form
+public partial class ReviewForm : XtraForm
 {
     private readonly IServiceProvider _serviceProvider;
     private readonly ILogger<ReviewForm> _logger;

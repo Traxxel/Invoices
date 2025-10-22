@@ -1,56 +1,61 @@
-# Aufgabe 33: MainForm (Grid, Buttons, Search)
+# Aufgabe 33: frmMain (Grid, Buttons, Search)
 
 ## Ziel
 
-MainForm für die Hauptansicht der Invoice Reader Anwendung mit Grid, Buttons und Suchfunktionalität.
+Hauptformular (frmMain) für die Invoice-Anwendung mit DevExpress-Komponenten (XtraGrid, Ribbon, SimpleButton).
 
-## 1. MainForm Interface
+## 1. frmMain Interface
 
-**Datei:** `src/Invoice.WinForms/Forms/MainForm.cs`
+**Datei:** `src/Invoice.WinForms/Forms/frmMain.cs`
 
 ```csharp
 using Invoice.Application.Interfaces;
 using Invoice.Application.DTOs;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using DevExpress.XtraEditors;
+using DevExpress.XtraGrid;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace Invoice.WinForms.Forms;
 
-public partial class MainForm : Form
+public partial class frmMain : XtraForm
 {
     private readonly IServiceProvider _serviceProvider;
-    private readonly ILogger<MainForm> _logger;
+    private readonly ILogger<frmMain> _logger;
     private readonly IInvoiceRepository _invoiceRepository;
     private readonly IImportInvoiceUseCase _importInvoiceUseCase;
     private readonly ISaveInvoiceUseCase _saveInvoiceUseCase;
     private readonly IExtractFieldsUseCase _extractFieldsUseCase;
     private readonly ITrainModelsUseCase _trainModelsUseCase;
 
-    // UI Controls
-    private DataGridView _invoicesGrid;
-    private ToolStrip _mainToolStrip;
-    private StatusStrip _statusStrip;
-    private MenuStrip _menuStrip;
-    private TextBox _searchTextBox;
-    private ComboBox _searchComboBox;
-    private Button _searchButton;
-    private Button _importButton;
-    private Button _exportButton;
-    private Button _trainButton;
-    private Button _settingsButton;
-    private Button _refreshButton;
-    private Button _deleteButton;
-    private Button _editButton;
-    private Button _viewButton;
-    private Label _statusLabel;
-    private ProgressBar _progressBar;
+    // DevExpress UI Controls
+    private GridControl _gridControl;
+    private GridView _gridView;
+    private DevExpress.XtraBars.Ribbon.RibbonControl _ribbon;
+    private DevExpress.XtraBars.Ribbon.RibbonPage _ribbonPageHome;
+    private DevExpress.XtraBars.Ribbon.RibbonPageGroup _ribbonGroupActions;
+    private DevExpress.XtraBars.Ribbon.RibbonPageGroup _ribbonGroupData;
+    private DevExpress.XtraBars.BarButtonItem _barButtonImport;
+    private DevExpress.XtraBars.BarButtonItem _barButtonExport;
+    private DevExpress.XtraBars.BarButtonItem _barButtonTrain;
+    private DevExpress.XtraBars.BarButtonItem _barButtonSettings;
+    private DevExpress.XtraBars.BarButtonItem _barButtonRefresh;
+    private DevExpress.XtraBars.BarButtonItem _barButtonDelete;
+    private DevExpress.XtraBars.BarButtonItem _barButtonEdit;
+    private DevExpress.XtraBars.BarButtonItem _barButtonView;
+    private TextEdit _searchTextEdit;
+    private ComboBoxEdit _searchComboBoxEdit;
+    private SimpleButton _searchButton;
+    private LabelControl _statusLabel;
+    private DevExpress.XtraEditors.ProgressBarControl _progressBar;
 
     // Data
     private List<InvoiceDto> _invoices;
     private List<InvoiceDto> _filteredInvoices;
     private InvoiceDto? _selectedInvoice;
 
-    public MainForm(IServiceProvider serviceProvider)
+    public frmMain(IServiceProvider serviceProvider)
     {
         _serviceProvider = serviceProvider;
         _logger = serviceProvider.GetRequiredService<ILogger<MainForm>>();

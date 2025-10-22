@@ -1,8 +1,8 @@
-# Aufgabe 37: PDF-Viewer Control (PdfPig Rendering)
+# Aufgabe 37: PDF-Viewer Control (DevExpress PdfViewer)
 
 ## Ziel
 
-PDF-Viewer Control für die Anzeige von PDF-Dateien mit PdfPig Rendering und Bounding Box Highlighting.
+PDF-Viewer Control für die Anzeige von PDF-Dateien mit DevExpress PdfViewer und Bounding Box Highlighting.
 
 ## 1. PDF-Viewer Control Interface
 
@@ -12,30 +12,30 @@ PDF-Viewer Control für die Anzeige von PDF-Dateien mit PdfPig Rendering und Bou
 using Invoice.Application.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using DevExpress.XtraPdfViewer;
+using DevExpress.XtraEditors;
+using DevExpress.XtraBars;
 using UglyToad.PdfPig;
-using UglyToad.PdfPig.Content;
-using UglyToad.PdfPig.Graphics;
 
 namespace Invoice.WinForms.Controls;
 
-public partial class PdfViewerControl : UserControl
+public partial class PdfViewerControl : XtraUserControl
 {
     private readonly IServiceProvider _serviceProvider;
     private readonly ILogger<PdfViewerControl> _logger;
     private readonly IPdfParserService _pdfParserService;
 
-    // UI Controls
-    private Panel _pdfPanel;
-    private VScrollBar _verticalScrollBar;
-    private HScrollBar _horizontalScrollBar;
-    private ToolStrip _toolStrip;
-    private ToolStripButton _zoomInButton;
-    private ToolStripButton _zoomOutButton;
-    private ToolStripButton _fitToWidthButton;
-    private ToolStripButton _fitToHeightButton;
-    private ToolStripButton _actualSizeButton;
-    private ToolStripComboBox _pageComboBox;
-    private ToolStripLabel _pageLabel;
+    // DevExpress PDF Viewer
+    private PdfViewer _pdfViewer;
+    private BarManager _barManager;
+    private Bar _toolBar;
+    private BarButtonItem _zoomInButton;
+    private BarButtonItem _zoomOutButton;
+    private BarButtonItem _fitToWidthButton;
+    private BarButtonItem _fitToHeightButton;
+    private BarButtonItem _actualSizeButton;
+    private BarEditItem _pageSelector;
+    private BarStaticItem _pageLabel;
 
     // Data
     private string? _pdfFilePath;
