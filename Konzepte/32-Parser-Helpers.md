@@ -6,10 +6,10 @@ Parser-Helpers für die Verarbeitung und Normalisierung von Datumsangaben, Dezim
 
 ## 1. Parser Helper Service Interface
 
-**Datei:** `src/InvoiceReader.Application/Interfaces/IParserHelperService.cs`
+**Datei:** `src/Invoice.Application/Interfaces/IParserHelperService.cs`
 
 ```csharp
-namespace InvoiceReader.Application.Interfaces;
+namespace Invoice.Application.Interfaces;
 
 public interface IParserHelperService
 {
@@ -433,15 +433,15 @@ public record TextValidationOptions(
 
 ## 2. Parser Helper Service Implementation
 
-**Datei:** `src/InvoiceReader.Application/Services/ParserHelperService.cs`
+**Datei:** `src/Invoice.Application/Services/ParserHelperService.cs`
 
 ```csharp
-using InvoiceReader.Application.Interfaces;
+using Invoice.Application.Interfaces;
 using Microsoft.Extensions.Logging;
 using System.Globalization;
 using System.Text.RegularExpressions;
 
-namespace InvoiceReader.Application.Services;
+namespace Invoice.Application.Services;
 
 public class ParserHelperService : IParserHelperService
 {
@@ -2447,13 +2447,13 @@ public class ParserHelperService : IParserHelperService
 
 ## 3. Parser Helper Service Extensions
 
-**Datei:** `src/InvoiceReader.Application/Extensions/ParserHelperExtensions.cs`
+**Datei:** `src/Invoice.Application/Extensions/ParserHelperExtensions.cs`
 
 ```csharp
-using InvoiceReader.Application.Services;
+using Invoice.Application.Services;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace InvoiceReader.Application.Extensions;
+namespace Invoice.Application.Extensions;
 
 public static class ParserHelperExtensions
 {

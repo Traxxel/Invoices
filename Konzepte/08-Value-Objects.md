@@ -6,12 +6,12 @@ Domain-spezifische Value Objects für typsichere und validierte Werte definieren
 
 ## 1. Money Value Object
 
-**Datei:** `src/InvoiceReader.Domain/ValueObjects/Money.cs`
+**Datei:** `src/Invoice.Domain/ValueObjects/Money.cs`
 
 ```csharp
 using System.Globalization;
 
-namespace InvoiceReader.Domain.ValueObjects;
+namespace Invoice.Domain.ValueObjects;
 
 public readonly record struct Money
 {
@@ -132,10 +132,10 @@ public readonly record struct Money
 
 ## 2. Address Value Object
 
-**Datei:** `src/InvoiceReader.Domain/ValueObjects/Address.cs`
+**Datei:** `src/Invoice.Domain/ValueObjects/Address.cs`
 
 ```csharp
-namespace InvoiceReader.Domain.ValueObjects;
+namespace Invoice.Domain.ValueObjects;
 
 public readonly record struct Address
 {
@@ -203,12 +203,12 @@ public readonly record struct Address
 
 ## 3. InvoiceNumber Value Object
 
-**Datei:** `src/InvoiceReader.Domain/ValueObjects/InvoiceNumber.cs`
+**Datei:** `src/Invoice.Domain/ValueObjects/InvoiceNumber.cs`
 
 ```csharp
 using System.Text.RegularExpressions;
 
-namespace InvoiceReader.Domain.ValueObjects;
+namespace Invoice.Domain.ValueObjects;
 
 public readonly record struct InvoiceNumber
 {
@@ -294,10 +294,10 @@ public readonly record struct InvoiceNumber
 
 ## 4. DateRange Value Object
 
-**Datei:** `src/InvoiceReader.Domain/ValueObjects/DateRange.cs`
+**Datei:** `src/Invoice.Domain/ValueObjects/DateRange.cs`
 
 ```csharp
-namespace InvoiceReader.Domain.ValueObjects;
+namespace Invoice.Domain.ValueObjects;
 
 public readonly record struct DateRange
 {
@@ -355,10 +355,10 @@ public readonly record struct DateRange
 
 ## 5. Confidence Value Object
 
-**Datei:** `src/InvoiceReader.Domain/ValueObjects/Confidence.cs`
+**Datei:** `src/Invoice.Domain/ValueObjects/Confidence.cs`
 
 ```csharp
-namespace InvoiceReader.Domain.ValueObjects;
+namespace Invoice.Domain.ValueObjects;
 
 public readonly record struct Confidence
 {
@@ -421,10 +421,10 @@ public enum ConfidenceLevel
 
 ## 6. Value Object Extensions
 
-**Datei:** `src/InvoiceReader.Domain/ValueObjects/ValueObjectExtensions.cs`
+**Datei:** `src/Invoice.Domain/ValueObjects/ValueObjectExtensions.cs`
 
 ```csharp
-namespace InvoiceReader.Domain.ValueObjects;
+namespace Invoice.Domain.ValueObjects;
 
 public static class ValueObjectExtensions
 {

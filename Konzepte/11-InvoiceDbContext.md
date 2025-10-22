@@ -6,15 +6,15 @@ EF Core DbContext mit allen DbSets und grundlegender Konfiguration für die Invo
 
 ## 1. InvoiceDbContext
 
-**Datei:** `src/InvoiceReader.Infrastructure/Data/InvoiceDbContext.cs`
+**Datei:** `src/Invoice.Infrastructure/Data/InvoiceDbContext.cs`
 
 ```csharp
-using InvoiceReader.Domain.Entities;
-using InvoiceReader.Infrastructure.Data.Configurations;
+using Invoice.Domain.Entities;
+using Invoice.Infrastructure.Data.Configurations;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
-namespace InvoiceReader.Infrastructure.Data;
+namespace Invoice.Infrastructure.Data;
 
 public class InvoiceDbContext : DbContext
 {
@@ -45,7 +45,7 @@ public class InvoiceDbContext : DbContext
         if (!optionsBuilder.IsConfigured)
         {
             // Fallback configuration if not configured via DI
-            optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=InvoiceReader;Trusted_Connection=True;TrustServerCertificate=True;");
+            optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=Invoice;Trusted_Connection=True;TrustServerCertificate=True;");
         }
 
         // Enable sensitive data logging in development
@@ -165,13 +165,13 @@ public class DatabaseStatistics
 
 ## 2. DbContext Factory
 
-**Datei:** `src/InvoiceReader.Infrastructure/Data/InvoiceDbContextFactory.cs`
+**Datei:** `src/Invoice.Infrastructure/Data/InvoiceDbContextFactory.cs`
 
 ```csharp
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 
-namespace InvoiceReader.Infrastructure.Data;
+namespace Invoice.Infrastructure.Data;
 
 public class InvoiceDbContextFactory : IDesignTimeDbContextFactory<InvoiceDbContext>
 {
@@ -180,7 +180,7 @@ public class InvoiceDbContextFactory : IDesignTimeDbContextFactory<InvoiceDbCont
         var optionsBuilder = new DbContextOptionsBuilder<InvoiceDbContext>();
 
         // Default connection string for design-time
-        var connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=InvoiceReader;Trusted_Connection=True;TrustServerCertificate=True;";
+        var connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=Invoice;Trusted_Connection=True;TrustServerCertificate=True;";
 
         optionsBuilder.UseSqlServer(connectionString);
 
@@ -191,13 +191,13 @@ public class InvoiceDbContextFactory : IDesignTimeDbContextFactory<InvoiceDbCont
 
 ## 3. DbContext Extensions
 
-**Datei:** `src/InvoiceReader.Infrastructure/Data/Extensions/DbContextExtensions.cs`
+**Datei:** `src/Invoice.Infrastructure/Data/Extensions/DbContextExtensions.cs`
 
 ```csharp
-using InvoiceReader.Domain.Entities;
+using Invoice.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace InvoiceReader.Infrastructure.Data.Extensions;
+namespace Invoice.Infrastructure.Data.Extensions;
 
 public static class DbContextExtensions
 {
@@ -303,13 +303,13 @@ public static class DbContextExtensions
 
 ## 4. DbContext Health Check
 
-**Datei:** `src/InvoiceReader.Infrastructure/Data/HealthChecks/DatabaseHealthCheck.cs`
+**Datei:** `src/Invoice.Infrastructure/Data/HealthChecks/DatabaseHealthCheck.cs`
 
 ```csharp
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 
-namespace InvoiceReader.Infrastructure.Data.HealthChecks;
+namespace Invoice.Infrastructure.Data.HealthChecks;
 
 public class DatabaseHealthCheck : IHealthCheck
 {
@@ -364,16 +364,16 @@ public class DatabaseHealthCheck : IHealthCheck
 
 ## 5. DbContext Service Registration
 
-**Datei:** `src/InvoiceReader.Infrastructure/Data/Extensions/DatabaseExtensions.cs`
+**Datei:** `src/Invoice.Infrastructure/Data/Extensions/DatabaseExtensions.cs`
 
 ```csharp
-using InvoiceReader.Infrastructure.Data;
-using InvoiceReader.Infrastructure.Data.HealthChecks;
+using Invoice.Infrastructure.Data;
+using Invoice.Infrastructure.Data.HealthChecks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace InvoiceReader.Infrastructure.Data.Extensions;
+namespace Invoice.Infrastructure.Data.Extensions;
 
 public static class DatabaseExtensions
 {

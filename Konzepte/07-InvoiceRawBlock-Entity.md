@@ -6,13 +6,13 @@ Entity für rohe Textblöcke aus PDF-Parsing zur Nachvollziehbarkeit der ML-Extr
 
 ## 1. InvoiceRawBlock Entity
 
-**Datei:** `src/InvoiceReader.Domain/Entities/InvoiceRawBlock.cs`
+**Datei:** `src/Invoice.Domain/Entities/InvoiceRawBlock.cs`
 
 ```csharp
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace InvoiceReader.Domain.Entities;
+namespace Invoice.Domain.Entities;
 
 public class InvoiceRawBlock
 {
@@ -178,10 +178,10 @@ public class InvoiceRawBlock
 
 ## 2. RawBlock Factory
 
-**Datei:** `src/InvoiceReader.Domain/Entities/RawBlockFactory.cs`
+**Datei:** `src/Invoice.Domain/Entities/RawBlockFactory.cs`
 
 ```csharp
-namespace InvoiceReader.Domain.Entities;
+namespace Invoice.Domain.Entities;
 
 public static class RawBlockFactory
 {
@@ -294,12 +294,12 @@ public class Word
 
 ## 3. RawBlock Specifications
 
-**Datei:** `src/InvoiceReader.Domain/Entities/RawBlockSpecifications.cs`
+**Datei:** `src/Invoice.Domain/Entities/RawBlockSpecifications.cs`
 
 ```csharp
 using System.Linq.Expressions;
 
-namespace InvoiceReader.Domain.Entities;
+namespace Invoice.Domain.Entities;
 
 public static class RawBlockSpecifications
 {
@@ -373,12 +373,12 @@ public static class RawBlockSpecifications
 
 ## 4. RawBlock Comparer
 
-**Datei:** `src/InvoiceReader.Domain/Entities/RawBlockComparer.cs`
+**Datei:** `src/Invoice.Domain/Entities/RawBlockComparer.cs`
 
 ```csharp
 using System.Collections.Generic;
 
-namespace InvoiceReader.Domain.Entities;
+namespace Invoice.Domain.Entities;
 
 public class RawBlockComparer : IEqualityComparer<InvoiceRawBlock>
 {

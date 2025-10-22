@@ -6,10 +6,10 @@ Feature-Extraction Service für ML-Training mit Bounding Boxes, Regex-Hits und K
 
 ## 1. Feature Extraction Interface
 
-**Datei:** `src/InvoiceReader.Application/Interfaces/IFeatureExtractionService.cs`
+**Datei:** `src/Invoice.Application/Interfaces/IFeatureExtractionService.cs`
 
 ```csharp
-namespace InvoiceReader.Application.Interfaces;
+namespace Invoice.Application.Interfaces;
 
 public interface IFeatureExtractionService
 {
@@ -171,14 +171,14 @@ public class MLFeatureVector
 
 ## 2. Feature Extraction Implementation
 
-**Datei:** `src/InvoiceReader.Infrastructure/Services/FeatureExtractionService.cs`
+**Datei:** `src/Invoice.Infrastructure/Services/FeatureExtractionService.cs`
 
 ```csharp
-using InvoiceReader.Application.Interfaces;
+using Invoice.Application.Interfaces;
 using Microsoft.Extensions.Logging;
 using System.Text.RegularExpressions;
 
-namespace InvoiceReader.Infrastructure.Services;
+namespace Invoice.Infrastructure.Services;
 
 public class FeatureExtractionService : IFeatureExtractionService
 {
@@ -687,13 +687,13 @@ public class FeatureExtractionService : IFeatureExtractionService
 
 ## 3. Feature Extraction Extensions
 
-**Datei:** `src/InvoiceReader.Infrastructure/Extensions/FeatureExtractionExtensions.cs`
+**Datei:** `src/Invoice.Infrastructure/Extensions/FeatureExtractionExtensions.cs`
 
 ```csharp
-using InvoiceReader.Infrastructure.Services;
+using Invoice.Infrastructure.Services;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace InvoiceReader.Infrastructure.Extensions;
+namespace Invoice.Infrastructure.Extensions;
 
 public static class FeatureExtractionExtensions
 {

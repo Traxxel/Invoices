@@ -6,15 +6,15 @@ BatchImportDialog für den Import mehrerer PDF-Dateien mit detaillierter Status-
 
 ## 1. BatchImportDialog Interface
 
-**Datei:** `src/InvoiceReader.WinForms/Forms/BatchImportDialog.cs`
+**Datei:** `src/Invoice.WinForms/Forms/BatchImportDialog.cs`
 
 ```csharp
-using InvoiceReader.Application.Interfaces;
-using InvoiceReader.Application.DTOs;
+using Invoice.Application.Interfaces;
+using Invoice.Application.DTOs;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace InvoiceReader.WinForms.Forms;
+namespace Invoice.WinForms.Forms;
 
 public partial class BatchImportDialog : Form
 {

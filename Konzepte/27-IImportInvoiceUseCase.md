@@ -6,10 +6,10 @@ Import Invoice Use Case für PDF-Import mit ML-basierter Feld-Extraktion und man
 
 ## 1. Import Invoice Use Case Interface
 
-**Datei:** `src/InvoiceReader.Application/Interfaces/IImportInvoiceUseCase.cs`
+**Datei:** `src/Invoice.Application/Interfaces/IImportInvoiceUseCase.cs`
 
 ```csharp
-namespace InvoiceReader.Application.Interfaces;
+namespace Invoice.Application.Interfaces;
 
 public interface IImportInvoiceUseCase
 {
@@ -154,15 +154,15 @@ public record ImportStatistics(
 
 ## 2. Import Invoice Use Case Implementation
 
-**Datei:** `src/InvoiceReader.Application/UseCases/ImportInvoiceUseCase.cs`
+**Datei:** `src/Invoice.Application/UseCases/ImportInvoiceUseCase.cs`
 
 ```csharp
-using InvoiceReader.Application.Interfaces;
-using InvoiceReader.Application.DTOs;
-using InvoiceReader.Domain.Entities;
+using Invoice.Application.Interfaces;
+using Invoice.Application.DTOs;
+using Invoice.Domain.Entities;
 using Microsoft.Extensions.Logging;
 
-namespace InvoiceReader.Application.UseCases;
+namespace Invoice.Application.UseCases;
 
 public class ImportInvoiceUseCase : IImportInvoiceUseCase
 {
@@ -853,13 +853,13 @@ public class ImportInvoiceUseCase : IImportInvoiceUseCase
 
 ## 3. Import Invoice Use Case Extensions
 
-**Datei:** `src/InvoiceReader.Application/Extensions/ImportInvoiceExtensions.cs`
+**Datei:** `src/Invoice.Application/Extensions/ImportInvoiceExtensions.cs`
 
 ```csharp
-using InvoiceReader.Application.UseCases;
+using Invoice.Application.UseCases;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace InvoiceReader.Application.Extensions;
+namespace Invoice.Application.Extensions;
 
 public static class ImportInvoiceExtensions
 {

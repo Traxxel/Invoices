@@ -6,15 +6,15 @@ ReviewForm für die Überprüfung und Bearbeitung von extrahierten Rechnungsfeld
 
 ## 1. ReviewForm Interface
 
-**Datei:** `src/InvoiceReader.WinForms/Forms/ReviewForm.cs`
+**Datei:** `src/Invoice.WinForms/Forms/ReviewForm.cs`
 
 ```csharp
-using InvoiceReader.Application.Interfaces;
-using InvoiceReader.Application.DTOs;
+using Invoice.Application.Interfaces;
+using Invoice.Application.DTOs;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace InvoiceReader.WinForms.Forms;
+namespace Invoice.WinForms.Forms;
 
 public partial class ReviewForm : Form
 {

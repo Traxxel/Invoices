@@ -6,10 +6,10 @@ Regex-Patterns für die Extraktion und Validierung von Rechnungsnummern, Datumsa
 
 ## 1. Regex Pattern Service Interface
 
-**Datei:** `src/InvoiceReader.Application/Interfaces/IRegexPatternService.cs`
+**Datei:** `src/Invoice.Application/Interfaces/IRegexPatternService.cs`
 
 ```csharp
-namespace InvoiceReader.Application.Interfaces;
+namespace Invoice.Application.Interfaces;
 
 public interface IRegexPatternService
 {
@@ -151,14 +151,14 @@ public record PatternUsageStatistics(
 
 ## 2. Regex Pattern Service Implementation
 
-**Datei:** `src/InvoiceReader.Application/Services/RegexPatternService.cs`
+**Datei:** `src/Invoice.Application/Services/RegexPatternService.cs`
 
 ```csharp
-using InvoiceReader.Application.Interfaces;
+using Invoice.Application.Interfaces;
 using Microsoft.Extensions.Logging;
 using System.Text.RegularExpressions;
 
-namespace InvoiceReader.Application.Services;
+namespace Invoice.Application.Services;
 
 public class RegexPatternService : IRegexPatternService
 {
@@ -953,13 +953,13 @@ public class RegexPatternService : IRegexPatternService
 
 ## 3. Regex Pattern Service Extensions
 
-**Datei:** `src/InvoiceReader.Application/Extensions/RegexPatternExtensions.cs`
+**Datei:** `src/Invoice.Application/Extensions/RegexPatternExtensions.cs`
 
 ```csharp
-using InvoiceReader.Application.Services;
+using Invoice.Application.Services;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace InvoiceReader.Application.Extensions;
+namespace Invoice.Application.Extensions;
 
 public static class RegexPatternExtensions
 {

@@ -5,28 +5,28 @@ Erstelle die komplette .NET 8 Solution-Struktur mit allen 4 Projekten gemäß de
 
 ## Projektstruktur
 ```
-InvoiceReader.sln
+Invoice.sln
 │
 ├─ src/
-│  ├─ InvoiceReader.WinForms/           # UI Layer
-│  │  ├─ InvoiceReader.WinForms.csproj
+│  ├─ Invoice.WinForms/           # UI Layer
+│  │  ├─ Invoice.WinForms.csproj
 │  │  ├─ Program.cs
 │  │  └─ Forms/
 │  │
-│  ├─ InvoiceReader.Application/        # Application Layer
-│  │  ├─ InvoiceReader.Application.csproj
+│  ├─ Invoice.Application/        # Application Layer
+│  │  ├─ Invoice.Application.csproj
 │  │  ├─ UseCases/
 │  │  ├─ DTOs/
 │  │  └─ Interfaces/
 │  │
-│  ├─ InvoiceReader.Domain/             # Domain Layer
-│  │  ├─ InvoiceReader.Domain.csproj
+│  ├─ Invoice.Domain/             # Domain Layer
+│  │  ├─ Invoice.Domain.csproj
 │  │  ├─ Entities/
 │  │  ├─ ValueObjects/
 │  │  └─ Enums/
 │  │
-│  └─ InvoiceReader.Infrastructure/     # Infrastructure Layer
-│     ├─ InvoiceReader.Infrastructure.csproj
+│  └─ Invoice.Infrastructure/     # Infrastructure Layer
+│     ├─ Invoice.Infrastructure.csproj
 │     ├─ Data/
 │     ├─ Services/
 │     └─ ML/
@@ -42,13 +42,13 @@ InvoiceReader.sln
 ## Zu erstellende Dateien
 
 ### 1. Solution-Datei
-**Datei:** `InvoiceReader.sln`
+**Datei:** `Invoice.sln`
 - .NET 8 Solution
 - Alle 4 Projekte als Solution Items
 - Solution Folders für bessere Organisation
 
 ### 2. WinForms Projekt
-**Datei:** `src/InvoiceReader.WinForms/InvoiceReader.WinForms.csproj`
+**Datei:** `src/Invoice.WinForms/Invoice.WinForms.csproj`
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
@@ -60,18 +60,18 @@ InvoiceReader.sln
   </PropertyGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\InvoiceReader.Application\InvoiceReader.Application.csproj" />
+    <ProjectReference Include="..\Invoice.Application\Invoice.Application.csproj" />
   </ItemGroup>
 </Project>
 ```
 
-**Datei:** `src/InvoiceReader.WinForms/Program.cs`
+**Datei:** `src/Invoice.WinForms/Program.cs`
 - Standard WinForms Program.cs
 - Dependency Injection Setup
 - Application.Run mit MainForm
 
 ### 3. Application Projekt
-**Datei:** `src/InvoiceReader.Application/InvoiceReader.Application.csproj`
+**Datei:** `src/Invoice.Application/Invoice.Application.csproj`
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
@@ -81,13 +81,13 @@ InvoiceReader.sln
   </PropertyGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\InvoiceReader.Domain\InvoiceReader.Domain.csproj" />
+    <ProjectReference Include="..\Invoice.Domain\Invoice.Domain.csproj" />
   </ItemGroup>
 </Project>
 ```
 
 ### 4. Domain Projekt
-**Datei:** `src/InvoiceReader.Domain/InvoiceReader.Domain.csproj`
+**Datei:** `src/Invoice.Domain/Invoice.Domain.csproj`
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
@@ -99,7 +99,7 @@ InvoiceReader.sln
 ```
 
 ### 5. Infrastructure Projekt
-**Datei:** `src/InvoiceReader.Infrastructure/InvoiceReader.Infrastructure.csproj`
+**Datei:** `src/Invoice.Infrastructure/Invoice.Infrastructure.csproj`
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
@@ -109,8 +109,8 @@ InvoiceReader.sln
   </PropertyGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\InvoiceReader.Domain\InvoiceReader.Domain.csproj" />
-    <ProjectReference Include="..\InvoiceReader.Application\InvoiceReader.Application.csproj" />
+    <ProjectReference Include="..\Invoice.Domain\Invoice.Domain.csproj" />
+    <ProjectReference Include="..\Invoice.Application\Invoice.Application.csproj" />
   </ItemGroup>
 </Project>
 ```

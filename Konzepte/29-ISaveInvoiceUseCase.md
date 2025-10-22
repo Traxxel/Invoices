@@ -6,10 +6,10 @@ Save Invoice Use Case für das Speichern von Rechnungen mit Duplikatbehandlung u
 
 ## 1. Save Invoice Use Case Interface
 
-**Datei:** `src/InvoiceReader.Application/Interfaces/ISaveInvoiceUseCase.cs`
+**Datei:** `src/Invoice.Application/Interfaces/ISaveInvoiceUseCase.cs`
 
 ```csharp
-namespace InvoiceReader.Application.Interfaces;
+namespace Invoice.Application.Interfaces;
 
 public interface ISaveInvoiceUseCase
 {
@@ -464,15 +464,15 @@ public enum BusinessRulesLevel
 
 ## 2. Save Invoice Use Case Implementation
 
-**Datei:** `src/InvoiceReader.Application/UseCases/SaveInvoiceUseCase.cs`
+**Datei:** `src/Invoice.Application/UseCases/SaveInvoiceUseCase.cs`
 
 ```csharp
-using InvoiceReader.Application.Interfaces;
-using InvoiceReader.Application.DTOs;
-using InvoiceReader.Domain.Entities;
+using Invoice.Application.Interfaces;
+using Invoice.Application.DTOs;
+using Invoice.Domain.Entities;
 using Microsoft.Extensions.Logging;
 
-namespace InvoiceReader.Application.UseCases;
+namespace Invoice.Application.UseCases;
 
 public class SaveInvoiceUseCase : ISaveInvoiceUseCase
 {
@@ -2110,13 +2110,13 @@ public class SaveInvoiceUseCase : ISaveInvoiceUseCase
 
 ## 3. Save Invoice Use Case Extensions
 
-**Datei:** `src/InvoiceReader.Application/Extensions/SaveInvoiceExtensions.cs`
+**Datei:** `src/Invoice.Application/Extensions/SaveInvoiceExtensions.cs`
 
 ```csharp
-using InvoiceReader.Application.UseCases;
+using Invoice.Application.UseCases;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace InvoiceReader.Application.Extensions;
+namespace Invoice.Application.Extensions;
 
 public static class SaveInvoiceExtensions
 {

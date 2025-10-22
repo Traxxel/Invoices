@@ -6,10 +6,10 @@ Train Models Use Case für ML-Modelltraining mit verschiedenen Trainingsoptionen
 
 ## 1. Train Models Use Case Interface
 
-**Datei:** `src/InvoiceReader.Application/Interfaces/ITrainModelsUseCase.cs`
+**Datei:** `src/Invoice.Application/Interfaces/ITrainModelsUseCase.cs`
 
 ```csharp
-namespace InvoiceReader.Application.Interfaces;
+namespace Invoice.Application.Interfaces;
 
 public interface ITrainModelsUseCase
 {
@@ -265,16 +265,16 @@ public record ModelPerformanceStatistics(
 
 ## 2. Train Models Use Case Implementation
 
-**Datei:** `src/InvoiceReader.Application/UseCases/TrainModelsUseCase.cs`
+**Datei:** `src/Invoice.Application/UseCases/TrainModelsUseCase.cs`
 
 ```csharp
-using InvoiceReader.Application.Interfaces;
-using InvoiceReader.Application.DTOs;
+using Invoice.Application.Interfaces;
+using Invoice.Application.DTOs;
 using Microsoft.Extensions.Logging;
 using Microsoft.ML;
 using Microsoft.ML.Data;
 
-namespace InvoiceReader.Application.UseCases;
+namespace Invoice.Application.UseCases;
 
 public class TrainModelsUseCase : ITrainModelsUseCase
 {
@@ -1484,13 +1484,13 @@ public class TrainModelsUseCase : ITrainModelsUseCase
 
 ## 3. Train Models Use Case Extensions
 
-**Datei:** `src/InvoiceReader.Application/Extensions/TrainModelsExtensions.cs`
+**Datei:** `src/Invoice.Application/Extensions/TrainModelsExtensions.cs`
 
 ```csharp
-using InvoiceReader.Application.UseCases;
+using Invoice.Application.UseCases;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace InvoiceReader.Application.Extensions;
+namespace Invoice.Application.Extensions;
 
 public static class TrainModelsExtensions
 {

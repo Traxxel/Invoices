@@ -6,10 +6,10 @@ Database Seeding für Initial Data und First-Run Logic für neue Installationen.
 
 ## 1. Database Seeder Interface
 
-**Datei:** `src/InvoiceReader.Application/Interfaces/IDatabaseSeeder.cs`
+**Datei:** `src/Invoice.Application/Interfaces/IDatabaseSeeder.cs`
 
 ```csharp
-namespace InvoiceReader.Application.Interfaces;
+namespace Invoice.Application.Interfaces;
 
 public interface IDatabaseSeeder
 {
@@ -31,17 +31,17 @@ public class SeedResult
 
 ## 2. Database Seeder Implementation
 
-**Datei:** `src/InvoiceReader.Infrastructure/Data/Seeders/DatabaseSeeder.cs`
+**Datei:** `src/Invoice.Infrastructure/Data/Seeders/DatabaseSeeder.cs`
 
 ```csharp
-using InvoiceReader.Application.Interfaces;
-using InvoiceReader.Domain.Entities;
-using InvoiceReader.Domain.ValueObjects;
-using InvoiceReader.Infrastructure.Data;
+using Invoice.Application.Interfaces;
+using Invoice.Domain.Entities;
+using Invoice.Domain.ValueObjects;
+using Invoice.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
-namespace InvoiceReader.Infrastructure.Data.Seeders;
+namespace Invoice.Infrastructure.Data.Seeders;
 
 public class DatabaseSeeder : IDatabaseSeeder
 {
@@ -274,16 +274,16 @@ public class DatabaseSeeder : IDatabaseSeeder
 
 ## 3. First-Run Service
 
-**Datei:** `src/InvoiceReader.Infrastructure/Data/Services/FirstRunService.cs`
+**Datei:** `src/Invoice.Infrastructure/Data/Services/FirstRunService.cs`
 
 ```csharp
-using InvoiceReader.Application.Interfaces;
-using InvoiceReader.Infrastructure.Data.Services;
+using Invoice.Application.Interfaces;
+using Invoice.Infrastructure.Data.Services;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace InvoiceReader.Infrastructure.Data.Services;
+namespace Invoice.Infrastructure.Data.Services;
 
 public interface IFirstRunService
 {
@@ -412,15 +412,15 @@ public class FirstRunService : IFirstRunService
 
 ## 4. First-Run Extensions
 
-**Datei:** `src/InvoiceReader.Infrastructure/Data/Extensions/FirstRunExtensions.cs`
+**Datei:** `src/Invoice.Infrastructure/Data/Extensions/FirstRunExtensions.cs`
 
 ```csharp
-using InvoiceReader.Application.Interfaces;
-using InvoiceReader.Infrastructure.Data.Seeders;
-using InvoiceReader.Infrastructure.Data.Services;
+using Invoice.Application.Interfaces;
+using Invoice.Infrastructure.Data.Seeders;
+using Invoice.Infrastructure.Data.Services;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace InvoiceReader.Infrastructure.Data.Extensions;
+namespace Invoice.Infrastructure.Data.Extensions;
 
 public static class FirstRunExtensions
 {
@@ -436,20 +436,20 @@ public static class FirstRunExtensions
 
 ## 5. Program.cs Integration
 
-**Datei:** `src/InvoiceReader.WinForms/Program.cs` (Erweiterung)
+**Datei:** `src/Invoice.WinForms/Program.cs` (Erweiterung)
 
 ```csharp
-using InvoiceReader.Application.Extensions;
-using InvoiceReader.Infrastructure.Data.Extensions;
-using InvoiceReader.Infrastructure.Data.Services;
-using InvoiceReader.Infrastructure.Extensions;
-using InvoiceReader.WinForms.Extensions;
-using InvoiceReader.WinForms.Forms;
+using Invoice.Application.Extensions;
+using Invoice.Infrastructure.Data.Extensions;
+using Invoice.Infrastructure.Data.Services;
+using Invoice.Infrastructure.Extensions;
+using Invoice.WinForms.Extensions;
+using Invoice.WinForms.Forms;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace InvoiceReader.WinForms;
+namespace Invoice.WinForms;
 
 static class Program
 {

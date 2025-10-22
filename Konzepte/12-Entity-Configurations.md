@@ -6,14 +6,14 @@ EF Core Fluent API-Konfigurationen für alle Entities mit Indizes, Constraints u
 
 ## 1. Invoice Configuration
 
-**Datei:** `src/InvoiceReader.Infrastructure/Data/Configurations/InvoiceConfiguration.cs`
+**Datei:** `src/Invoice.Infrastructure/Data/Configurations/InvoiceConfiguration.cs`
 
 ```csharp
-using InvoiceReader.Domain.Entities;
+using Invoice.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace InvoiceReader.Infrastructure.Data.Configurations;
+namespace Invoice.Infrastructure.Data.Configurations;
 
 public class InvoiceConfiguration : IEntityTypeConfiguration<Invoice>
 {
@@ -144,14 +144,14 @@ public class InvoiceConfiguration : IEntityTypeConfiguration<Invoice>
 
 ## 2. InvoiceRawBlock Configuration
 
-**Datei:** `src/InvoiceReader.Infrastructure/Data/Configurations/InvoiceRawBlockConfiguration.cs`
+**Datei:** `src/Invoice.Infrastructure/Data/Configurations/InvoiceRawBlockConfiguration.cs`
 
 ```csharp
-using InvoiceReader.Domain.Entities;
+using Invoice.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace InvoiceReader.Infrastructure.Data.Configurations;
+namespace Invoice.Infrastructure.Data.Configurations;
 
 public class InvoiceRawBlockConfiguration : IEntityTypeConfiguration<InvoiceRawBlock>
 {
@@ -273,13 +273,13 @@ public class InvoiceRawBlockConfiguration : IEntityTypeConfiguration<InvoiceRawB
 
 ## 3. Global Configuration
 
-**Datei:** `src/InvoiceReader.Infrastructure/Data/Configurations/GlobalConfiguration.cs`
+**Datei:** `src/Invoice.Infrastructure/Data/Configurations/GlobalConfiguration.cs`
 
 ```csharp
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace InvoiceReader.Infrastructure.Data.Configurations;
+namespace Invoice.Infrastructure.Data.Configurations;
 
 public static class GlobalConfiguration
 {
@@ -346,14 +346,14 @@ public static class GlobalConfiguration
 
 ## 4. Index Configuration
 
-**Datei:** `src/InvoiceReader.Infrastructure/Data/Configurations/IndexConfiguration.cs`
+**Datei:** `src/Invoice.Infrastructure/Data/Configurations/IndexConfiguration.cs`
 
 ```csharp
-using InvoiceReader.Domain.Entities;
+using Invoice.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace InvoiceReader.Infrastructure.Data.Configurations;
+namespace Invoice.Infrastructure.Data.Configurations;
 
 public static class IndexConfiguration
 {
@@ -444,13 +444,13 @@ public static class IndexConfiguration
 
 ## 5. Configuration Extensions
 
-**Datei:** `src/InvoiceReader.Infrastructure/Data/Extensions/ConfigurationExtensions.cs`
+**Datei:** `src/Invoice.Infrastructure/Data/Extensions/ConfigurationExtensions.cs`
 
 ```csharp
-using InvoiceReader.Infrastructure.Data.Configurations;
+using Invoice.Infrastructure.Data.Configurations;
 using Microsoft.EntityFrameworkCore;
 
-namespace InvoiceReader.Infrastructure.Data.Extensions;
+namespace Invoice.Infrastructure.Data.Extensions;
 
 public static class ConfigurationExtensions
 {
@@ -486,10 +486,10 @@ public static class ConfigurationExtensions
     {
         // Apply index configurations
         IndexConfiguration.ConfigureInvoiceIndexes(
-            modelBuilder.Entity<InvoiceReader.Domain.Entities.Invoice>());
+            modelBuilder.Entity<Invoice.Domain.Entities.Invoice>());
 
         IndexConfiguration.ConfigureRawBlockIndexes(
-            modelBuilder.Entity<InvoiceReader.Domain.Entities.InvoiceRawBlock>());
+            modelBuilder.Entity<Invoice.Domain.Entities.InvoiceRawBlock>());
 
         return modelBuilder;
     }

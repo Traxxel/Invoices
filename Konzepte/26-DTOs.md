@@ -6,10 +6,10 @@ Data Transfer Objects für saubere Trennung zwischen Domain und Application Laye
 
 ## 1. Invoice DTOs
 
-**Datei:** `src/InvoiceReader.Application/DTOs/InvoiceDto.cs`
+**Datei:** `src/Invoice.Application/DTOs/InvoiceDto.cs`
 
 ```csharp
-namespace InvoiceReader.Application.DTOs;
+namespace Invoice.Application.DTOs;
 
 public record InvoiceDto(
     Guid Id,
@@ -90,10 +90,10 @@ public record InvoiceSummaryDto(
 
 ## 2. Extraction DTOs
 
-**Datei:** `src/InvoiceReader.Application/DTOs/ExtractionDto.cs`
+**Datei:** `src/Invoice.Application/DTOs/ExtractionDto.cs`
 
 ```csharp
-namespace InvoiceReader.Application.DTOs;
+namespace Invoice.Application.DTOs;
 
 public record ExtractionResult(
     bool Success,
@@ -184,10 +184,10 @@ public record BatchExtractionResponse(
 
 ## 3. Training DTOs
 
-**Datei:** `src/InvoiceReader.Application/DTOs/TrainingDto.cs`
+**Datei:** `src/Invoice.Application/DTOs/TrainingDto.cs`
 
 ```csharp
-namespace InvoiceReader.Application.DTOs;
+namespace Invoice.Application.DTOs;
 
 public record TrainingRequest(
     string ModelName,
@@ -320,10 +320,10 @@ public record PerformanceMetric(
 
 ## 4. File Storage DTOs
 
-**Datei:** `src/InvoiceReader.Application/DTOs/FileStorageDto.cs`
+**Datei:** `src/Invoice.Application/DTOs/FileStorageDto.cs`
 
 ```csharp
-namespace InvoiceReader.Application.DTOs;
+namespace Invoice.Application.DTOs;
 
 public record FileStorageRequest(
     string SourcePath,
@@ -398,10 +398,10 @@ public record FileCleanupResponse(
 
 ## 5. Validation DTOs
 
-**Datei:** `src/InvoiceReader.Application/DTOs/ValidationDto.cs`
+**Datei:** `src/Invoice.Application/DTOs/ValidationDto.cs`
 
 ```csharp
-namespace InvoiceReader.Application.DTOs;
+namespace Invoice.Application.DTOs;
 
 public record ValidationResult(
     bool IsValid,
@@ -463,10 +463,10 @@ public record BusinessRuleValidationResult(
 
 ## 6. Search and Filter DTOs
 
-**Datei:** `src/InvoiceReader.Application/DTOs/SearchDto.cs`
+**Datei:** `src/Invoice.Application/DTOs/SearchDto.cs`
 
 ```csharp
-namespace InvoiceReader.Application.DTOs;
+namespace Invoice.Application.DTOs;
 
 public record SearchRequest(
     string Query,
@@ -538,10 +538,10 @@ public record FacetValue(
 
 ## 7. Common DTOs
 
-**Datei:** `src/InvoiceReader.Application/DTOs/CommonDto.cs`
+**Datei:** `src/Invoice.Application/DTOs/CommonDto.cs`
 
 ```csharp
-namespace InvoiceReader.Application.DTOs;
+namespace Invoice.Application.DTOs;
 
 public record ApiResponse<T>(
     bool Success,
@@ -629,13 +629,13 @@ public record AuditEntry(
 
 ## 8. DTO Extensions
 
-**Datei:** `src/InvoiceReader.Application/Extensions/DtoExtensions.cs`
+**Datei:** `src/Invoice.Application/Extensions/DtoExtensions.cs`
 
 ```csharp
-using InvoiceReader.Application.DTOs;
-using InvoiceReader.Domain.Entities;
+using Invoice.Application.DTOs;
+using Invoice.Domain.Entities;
 
-namespace InvoiceReader.Application.Extensions;
+namespace Invoice.Application.Extensions;
 
 public static class DtoExtensions
 {

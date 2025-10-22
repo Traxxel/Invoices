@@ -6,10 +6,10 @@ Domain-spezifische Enums und Constants für typsichere und wartbare Domain-Logik
 
 ## 1. Domain Enums
 
-**Datei:** `src/InvoiceReader.Domain/Enums/InvoiceStatus.cs`
+**Datei:** `src/Invoice.Domain/Enums/InvoiceStatus.cs`
 
 ```csharp
-namespace InvoiceReader.Domain.Enums;
+namespace Invoice.Domain.Enums;
 
 public enum InvoiceStatus
 {
@@ -23,10 +23,10 @@ public enum InvoiceStatus
 }
 ```
 
-**Datei:** `src/InvoiceReader.Domain/Enums/ExtractionStatus.cs`
+**Datei:** `src/Invoice.Domain/Enums/ExtractionStatus.cs`
 
 ```csharp
-namespace InvoiceReader.Domain.Enums;
+namespace Invoice.Domain.Enums;
 
 public enum ExtractionStatus
 {
@@ -39,10 +39,10 @@ public enum ExtractionStatus
 }
 ```
 
-**Datei:** `src/InvoiceReader.Domain/Enums/FieldType.cs`
+**Datei:** `src/Invoice.Domain/Enums/FieldType.cs`
 
 ```csharp
-namespace InvoiceReader.Domain.Enums;
+namespace Invoice.Domain.Enums;
 
 public enum FieldType
 {
@@ -56,10 +56,10 @@ public enum FieldType
 }
 ```
 
-**Datei:** `src/InvoiceReader.Domain/Enums/ConfidenceLevel.cs`
+**Datei:** `src/Invoice.Domain/Enums/ConfidenceLevel.cs`
 
 ```csharp
-namespace InvoiceReader.Domain.Enums;
+namespace Invoice.Domain.Enums;
 
 public enum ConfidenceLevel
 {
@@ -71,10 +71,10 @@ public enum ConfidenceLevel
 }
 ```
 
-**Datei:** `src/InvoiceReader.Domain/Enums/ValidationSeverity.cs`
+**Datei:** `src/Invoice.Domain/Enums/ValidationSeverity.cs`
 
 ```csharp
-namespace InvoiceReader.Domain.Enums;
+namespace Invoice.Domain.Enums;
 
 public enum ValidationSeverity
 {
@@ -85,10 +85,10 @@ public enum ValidationSeverity
 }
 ```
 
-**Datei:** `src/InvoiceReader.Domain/Enums/FileType.cs`
+**Datei:** `src/Invoice.Domain/Enums/FileType.cs`
 
 ```csharp
-namespace InvoiceReader.Domain.Enums;
+namespace Invoice.Domain.Enums;
 
 public enum FileType
 {
@@ -100,10 +100,10 @@ public enum FileType
 
 ## 2. Domain Constants
 
-**Datei:** `src/InvoiceReader.Domain/Constants/InvoiceConstants.cs`
+**Datei:** `src/Invoice.Domain/Constants/InvoiceConstants.cs`
 
 ```csharp
-namespace InvoiceReader.Domain.Constants;
+namespace Invoice.Domain.Constants;
 
 public static class InvoiceConstants
 {
@@ -145,10 +145,10 @@ public static class InvoiceConstants
 }
 ```
 
-**Datei:** `src/InvoiceReader.Domain/Constants/MLConstants.cs`
+**Datei:** `src/Invoice.Domain/Constants/MLConstants.cs`
 
 ```csharp
-namespace InvoiceReader.Domain.Constants;
+namespace Invoice.Domain.Constants;
 
 public static class MLConstants
 {
@@ -185,10 +185,10 @@ public static class MLConstants
 }
 ```
 
-**Datei:** `src/InvoiceReader.Domain/Constants/FileConstants.cs`
+**Datei:** `src/Invoice.Domain/Constants/FileConstants.cs`
 
 ```csharp
-namespace InvoiceReader.Domain.Constants;
+namespace Invoice.Domain.Constants;
 
 public static class FileConstants
 {
@@ -221,10 +221,10 @@ public static class FileConstants
 }
 ```
 
-**Datei:** `src/InvoiceReader.Domain/Constants/ValidationConstants.cs`
+**Datei:** `src/Invoice.Domain/Constants/ValidationConstants.cs`
 
 ```csharp
-namespace InvoiceReader.Domain.Constants;
+namespace Invoice.Domain.Constants;
 
 public static class ValidationConstants
 {
@@ -264,12 +264,12 @@ public static class ValidationConstants
 
 ## 3. Enum Extensions
 
-**Datei:** `src/InvoiceReader.Domain/Extensions/EnumExtensions.cs`
+**Datei:** `src/Invoice.Domain/Extensions/EnumExtensions.cs`
 
 ```csharp
-using InvoiceReader.Domain.Enums;
+using Invoice.Domain.Enums;
 
-namespace InvoiceReader.Domain.Extensions;
+namespace Invoice.Domain.Extensions;
 
 public static class EnumExtensions
 {
@@ -357,13 +357,13 @@ public static class EnumExtensions
 
 ## 4. Constants Extensions
 
-**Datei:** `src/InvoiceReader.Domain/Extensions/ConstantsExtensions.cs`
+**Datei:** `src/Invoice.Domain/Extensions/ConstantsExtensions.cs`
 
 ```csharp
-using InvoiceReader.Domain.Constants;
-using InvoiceReader.Domain.Enums;
+using Invoice.Domain.Constants;
+using Invoice.Domain.Enums;
 
-namespace InvoiceReader.Domain.Extensions;
+namespace Invoice.Domain.Extensions;
 
 public static class ConstantsExtensions
 {

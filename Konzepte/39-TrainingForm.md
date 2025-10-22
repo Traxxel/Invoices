@@ -6,15 +6,15 @@ TrainingForm für das Labeling von Trainingsdaten mit Grid-basierter Eingabe und
 
 ## 1. TrainingForm Interface
 
-**Datei:** `src/InvoiceReader.WinForms/Forms/TrainingForm.cs`
+**Datei:** `src/Invoice.WinForms/Forms/TrainingForm.cs`
 
 ```csharp
-using InvoiceReader.Application.Interfaces;
-using InvoiceReader.Application.DTOs;
+using Invoice.Application.Interfaces;
+using Invoice.Application.DTOs;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace InvoiceReader.WinForms.Forms;
+namespace Invoice.WinForms.Forms;
 
 public partial class TrainingForm : Form
 {

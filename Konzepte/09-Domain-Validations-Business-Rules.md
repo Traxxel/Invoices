@@ -6,13 +6,13 @@ Domain-spezifische Validierungen und Business Rules für die Invoice-Entity defi
 
 ## 1. Invoice Validator
 
-**Datei:** `src/InvoiceReader.Domain/Validators/InvoiceValidator.cs`
+**Datei:** `src/Invoice.Domain/Validators/InvoiceValidator.cs`
 
 ```csharp
-using InvoiceReader.Domain.Entities;
-using InvoiceReader.Domain.ValueObjects;
+using Invoice.Domain.Entities;
+using Invoice.Domain.ValueObjects;
 
-namespace InvoiceReader.Domain.Validators;
+namespace Invoice.Domain.Validators;
 
 public class InvoiceValidator
 {
@@ -196,10 +196,10 @@ public class InvoiceValidator
 
 ## 2. Validation Result
 
-**Datei:** `src/InvoiceReader.Domain/Validators/ValidationResult.cs`
+**Datei:** `src/Invoice.Domain/Validators/ValidationResult.cs`
 
 ```csharp
-namespace InvoiceReader.Domain.Validators;
+namespace Invoice.Domain.Validators;
 
 public class ValidationResult
 {
@@ -269,13 +269,13 @@ public record ValidationWarning(string Field, string Message);
 
 ## 3. Business Rules
 
-**Datei:** `src/InvoiceReader.Domain/BusinessRules/InvoiceBusinessRules.cs`
+**Datei:** `src/Invoice.Domain/BusinessRules/InvoiceBusinessRules.cs`
 
 ```csharp
-using InvoiceReader.Domain.Entities;
-using InvoiceReader.Domain.ValueObjects;
+using Invoice.Domain.Entities;
+using Invoice.Domain.ValueObjects;
 
-namespace InvoiceReader.Domain.BusinessRules;
+namespace Invoice.Domain.BusinessRules;
 
 public static class InvoiceBusinessRules
 {
@@ -357,13 +357,13 @@ public static class InvoiceBusinessRules
 
 ## 4. Domain Policies
 
-**Datei:** `src/InvoiceReader.Domain/Policies/InvoicePolicies.cs`
+**Datei:** `src/Invoice.Domain/Policies/InvoicePolicies.cs`
 
 ```csharp
-using InvoiceReader.Domain.Entities;
-using InvoiceReader.Domain.ValueObjects;
+using Invoice.Domain.Entities;
+using Invoice.Domain.ValueObjects;
 
-namespace InvoiceReader.Domain.Policies;
+namespace Invoice.Domain.Policies;
 
 public class InvoicePolicies
 {
@@ -426,12 +426,12 @@ public class InvoicePolicies
 
 ## 5. Domain Events
 
-**Datei:** `src/InvoiceReader.Domain/Events/InvoiceDomainEvents.cs`
+**Datei:** `src/Invoice.Domain/Events/InvoiceDomainEvents.cs`
 
 ```csharp
-using InvoiceReader.Domain.Entities;
+using Invoice.Domain.Entities;
 
-namespace InvoiceReader.Domain.Events;
+namespace Invoice.Domain.Events;
 
 public abstract class DomainEvent
 {

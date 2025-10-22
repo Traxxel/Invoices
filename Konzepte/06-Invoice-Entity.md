@@ -6,13 +6,13 @@ Haupt-Entity für Rechnungen mit allen Properties gemäß Konzept definieren.
 
 ## 1. Invoice Entity
 
-**Datei:** `src/InvoiceReader.Domain/Entities/Invoice.cs`
+**Datei:** `src/Invoice.Domain/Entities/Invoice.cs`
 
 ```csharp
-using InvoiceReader.Domain.ValueObjects;
+using Invoice.Domain.ValueObjects;
 using System.ComponentModel.DataAnnotations;
 
-namespace InvoiceReader.Domain.Entities;
+namespace Invoice.Domain.Entities;
 
 public class Invoice
 {
@@ -147,12 +147,12 @@ public class Invoice
 
 ## 2. Invoice Factory
 
-**Datei:** `src/InvoiceReader.Domain/Entities/InvoiceFactory.cs`
+**Datei:** `src/Invoice.Domain/Entities/InvoiceFactory.cs`
 
 ```csharp
-using InvoiceReader.Domain.ValueObjects;
+using Invoice.Domain.ValueObjects;
 
-namespace InvoiceReader.Domain.Entities;
+namespace Invoice.Domain.Entities;
 
 public static class InvoiceFactory
 {
@@ -218,10 +218,10 @@ public static class InvoiceFactory
 
 ## 3. Invoice Domain Events
 
-**Datei:** `src/InvoiceReader.Domain/Entities/InvoiceDomainEvents.cs`
+**Datei:** `src/Invoice.Domain/Entities/InvoiceDomainEvents.cs`
 
 ```csharp
-namespace InvoiceReader.Domain.Entities;
+namespace Invoice.Domain.Entities;
 
 public class InvoiceCreatedEvent
 {
@@ -251,12 +251,12 @@ public class InvoiceFinancialsUpdatedEvent
 
 ## 4. Invoice Specifications
 
-**Datei:** `src/InvoiceReader.Domain/Entities/InvoiceSpecifications.cs`
+**Datei:** `src/Invoice.Domain/Entities/InvoiceSpecifications.cs`
 
 ```csharp
 using System.Linq.Expressions;
 
-namespace InvoiceReader.Domain.Entities;
+namespace Invoice.Domain.Entities;
 
 public static class InvoiceSpecifications
 {
@@ -300,12 +300,12 @@ public static class InvoiceSpecifications
 
 ## 5. Invoice Comparer
 
-**Datei:** `src/InvoiceReader.Domain/Entities/InvoiceComparer.cs`
+**Datei:** `src/Invoice.Domain/Entities/InvoiceComparer.cs`
 
 ```csharp
 using System.Collections.Generic;
 
-namespace InvoiceReader.Domain.Entities;
+namespace Invoice.Domain.Entities;
 
 public class InvoiceComparer : IEqualityComparer<Invoice>
 {

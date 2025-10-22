@@ -6,13 +6,13 @@ Repository Pattern für saubere Trennung von Domain und Infrastructure mit volls
 
 ## 1. Repository Interfaces
 
-**Datei:** `src/InvoiceReader.Application/Interfaces/IInvoiceRepository.cs`
+**Datei:** `src/Invoice.Application/Interfaces/IInvoiceRepository.cs`
 
 ```csharp
-using InvoiceReader.Domain.Entities;
-using InvoiceReader.Domain.ValueObjects;
+using Invoice.Domain.Entities;
+using Invoice.Domain.ValueObjects;
 
-namespace InvoiceReader.Application.Interfaces;
+namespace Invoice.Application.Interfaces;
 
 public interface IInvoiceRepository
 {
@@ -65,12 +65,12 @@ public interface IInvoiceRepository
 }
 ```
 
-**Datei:** `src/InvoiceReader.Application/Interfaces/IInvoiceRawBlockRepository.cs`
+**Datei:** `src/Invoice.Application/Interfaces/IInvoiceRawBlockRepository.cs`
 
 ```csharp
-using InvoiceReader.Domain.Entities;
+using Invoice.Domain.Entities;
 
-namespace InvoiceReader.Application.Interfaces;
+namespace Invoice.Application.Interfaces;
 
 public interface IInvoiceRawBlockRepository
 {
@@ -123,16 +123,16 @@ public interface IInvoiceRawBlockRepository
 
 ## 2. Repository Implementations
 
-**Datei:** `src/InvoiceReader.Infrastructure/Data/Repositories/InvoiceRepository.cs`
+**Datei:** `src/Invoice.Infrastructure/Data/Repositories/InvoiceRepository.cs`
 
 ```csharp
-using InvoiceReader.Application.Interfaces;
-using InvoiceReader.Domain.Entities;
-using InvoiceReader.Domain.ValueObjects;
-using InvoiceReader.Infrastructure.Data;
+using Invoice.Application.Interfaces;
+using Invoice.Domain.Entities;
+using Invoice.Domain.ValueObjects;
+using Invoice.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace InvoiceReader.Infrastructure.Data.Repositories;
+namespace Invoice.Infrastructure.Data.Repositories;
 
 public class InvoiceRepository : IInvoiceRepository
 {
@@ -411,14 +411,14 @@ public class InvoiceRepository : IInvoiceRepository
 
 ## 3. Repository Service Registration
 
-**Datei:** `src/InvoiceReader.Infrastructure/Data/Extensions/RepositoryExtensions.cs`
+**Datei:** `src/Invoice.Infrastructure/Data/Extensions/RepositoryExtensions.cs`
 
 ```csharp
-using InvoiceReader.Application.Interfaces;
-using InvoiceReader.Infrastructure.Data.Repositories;
+using Invoice.Application.Interfaces;
+using Invoice.Infrastructure.Data.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace InvoiceReader.Infrastructure.Data.Extensions;
+namespace Invoice.Infrastructure.Data.Extensions;
 
 public static class RepositoryExtensions
 {

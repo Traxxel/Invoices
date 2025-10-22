@@ -5,12 +5,12 @@ Konfigurationsstruktur für die gesamte Anwendung definieren und Configuration-S
 
 ## 1. appsettings.json Struktur
 
-**Datei:** `src/InvoiceReader.WinForms/appsettings.json`
+**Datei:** `src/Invoice.WinForms/appsettings.json`
 
 ```json
 {
   "ConnectionStrings": {
-    "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=InvoiceReader;Trusted_Connection=True;TrustServerCertificate=True;"
+    "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=Invoice;Trusted_Connection=True;TrustServerCertificate=True;"
   },
   "AppSettings": {
     "StoragePath": "storage",
@@ -77,7 +77,7 @@ Konfigurationsstruktur für die gesamte Anwendung definieren und Configuration-S
 
 ## 2. appsettings.Development.json
 
-**Datei:** `src/InvoiceReader.WinForms/appsettings.Development.json`
+**Datei:** `src/Invoice.WinForms/appsettings.Development.json`
 
 ```json
 {
@@ -100,10 +100,10 @@ Konfigurationsstruktur für die gesamte Anwendung definieren und Configuration-S
 
 ## 3. Configuration Models
 
-**Datei:** `src/InvoiceReader.Infrastructure/Configuration/AppSettings.cs`
+**Datei:** `src/Invoice.Infrastructure/Configuration/AppSettings.cs`
 
 ```csharp
-namespace InvoiceReader.Infrastructure.Configuration;
+namespace Invoice.Infrastructure.Configuration;
 
 public class AppSettings
 {
@@ -119,10 +119,10 @@ public class AppSettings
 }
 ```
 
-**Datei:** `src/InvoiceReader.Infrastructure/Configuration/MLSettings.cs`
+**Datei:** `src/Invoice.Infrastructure/Configuration/MLSettings.cs`
 
 ```csharp
-namespace InvoiceReader.Infrastructure.Configuration;
+namespace Invoice.Infrastructure.Configuration;
 
 public class MLSettings
 {
@@ -147,10 +147,10 @@ public class FeatureSettings
 }
 ```
 
-**Datei:** `src/InvoiceReader.Infrastructure/Configuration/FileStorageSettings.cs`
+**Datei:** `src/Invoice.Infrastructure/Configuration/FileStorageSettings.cs`
 
 ```csharp
-namespace InvoiceReader.Infrastructure.Configuration;
+namespace Invoice.Infrastructure.Configuration;
 
 public class FileStorageSettings
 {
@@ -164,14 +164,14 @@ public class FileStorageSettings
 
 ## 4. Configuration Extension
 
-**Datei:** `src/InvoiceReader.Infrastructure/Extensions/ConfigurationExtensions.cs`
+**Datei:** `src/Invoice.Infrastructure/Extensions/ConfigurationExtensions.cs`
 
 ```csharp
-using InvoiceReader.Infrastructure.Configuration;
+using Invoice.Infrastructure.Configuration;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace InvoiceReader.Infrastructure.Extensions;
+namespace Invoice.Infrastructure.Extensions;
 
 public static class ConfigurationExtensions
 {
@@ -188,15 +188,15 @@ public static class ConfigurationExtensions
 
 ## 5. Configuration in Program.cs
 
-**Datei:** `src/InvoiceReader.WinForms/Program.cs`
+**Datei:** `src/Invoice.WinForms/Program.cs`
 
 ```csharp
-using InvoiceReader.Infrastructure.Extensions;
+using Invoice.Infrastructure.Extensions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace InvoiceReader.WinForms;
+namespace Invoice.WinForms;
 
 static class Program
 {

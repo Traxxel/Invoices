@@ -6,13 +6,13 @@ ML.NET Pipeline mit Featurization und Trainer für Multi-Class-Classification de
 
 ## 1. ML Pipeline Interface
 
-**Datei:** `src/InvoiceReader.Application/Interfaces/IMLPipelineService.cs`
+**Datei:** `src/Invoice.Application/Interfaces/IMLPipelineService.cs`
 
 ```csharp
 using Microsoft.ML;
 using Microsoft.ML.Data;
 
-namespace InvoiceReader.Application.Interfaces;
+namespace Invoice.Application.Interfaces;
 
 public interface IMLPipelineService
 {
@@ -109,19 +109,19 @@ public class ModelError
 
 ## 2. ML Pipeline Implementation
 
-**Datei:** `src/InvoiceReader.Infrastructure/ML/Services/MLPipelineService.cs`
+**Datei:** `src/Invoice.Infrastructure/ML/Services/MLPipelineService.cs`
 
 ```csharp
 using Microsoft.ML;
 using Microsoft.ML.Data;
 using Microsoft.ML.Trainers;
 using Microsoft.ML.Transforms;
-using InvoiceReader.Application.Interfaces;
-using InvoiceReader.Infrastructure.ML.Models;
-using InvoiceReader.Infrastructure.ML.Configuration;
+using Invoice.Application.Interfaces;
+using Invoice.Infrastructure.ML.Models;
+using Invoice.Infrastructure.ML.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace InvoiceReader.Infrastructure.ML.Services;
+namespace Invoice.Infrastructure.ML.Services;
 
 public class MLPipelineService : IMLPipelineService
 {
@@ -520,13 +520,13 @@ public class MLPipelineService : IMLPipelineService
 
 ## 3. ML Pipeline Extensions
 
-**Datei:** `src/InvoiceReader.Infrastructure/ML/Extensions/MLPipelineExtensions.cs`
+**Datei:** `src/Invoice.Infrastructure/ML/Extensions/MLPipelineExtensions.cs`
 
 ```csharp
-using InvoiceReader.Infrastructure.ML.Services;
+using Invoice.Infrastructure.ML.Services;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace InvoiceReader.Infrastructure.ML.Extensions;
+namespace Invoice.Infrastructure.ML.Extensions;
 
 public static class MLPipelineExtensions
 {

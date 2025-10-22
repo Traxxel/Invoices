@@ -6,10 +6,10 @@ Extract Fields Use Case für ML-basierte Feld-Extraktion mit Post-Processing und
 
 ## 1. Extract Fields Use Case Interface
 
-**Datei:** `src/InvoiceReader.Application/Interfaces/IExtractFieldsUseCase.cs`
+**Datei:** `src/Invoice.Application/Interfaces/IExtractFieldsUseCase.cs`
 
 ```csharp
-namespace InvoiceReader.Application.Interfaces;
+namespace Invoice.Application.Interfaces;
 
 public interface IExtractFieldsUseCase
 {
@@ -287,14 +287,14 @@ public record TrainingDataError(
 
 ## 2. Extract Fields Use Case Implementation
 
-**Datei:** `src/InvoiceReader.Application/UseCases/ExtractFieldsUseCase.cs`
+**Datei:** `src/Invoice.Application/UseCases/ExtractFieldsUseCase.cs`
 
 ```csharp
-using InvoiceReader.Application.Interfaces;
-using InvoiceReader.Application.DTOs;
+using Invoice.Application.Interfaces;
+using Invoice.Application.DTOs;
 using Microsoft.Extensions.Logging;
 
-namespace InvoiceReader.Application.UseCases;
+namespace Invoice.Application.UseCases;
 
 public class ExtractFieldsUseCase : IExtractFieldsUseCase
 {
@@ -1202,13 +1202,13 @@ public record FormatValidationResult(
 
 ## 3. Extract Fields Use Case Extensions
 
-**Datei:** `src/InvoiceReader.Application/Extensions/ExtractFieldsExtensions.cs`
+**Datei:** `src/Invoice.Application/Extensions/ExtractFieldsExtensions.cs`
 
 ```csharp
-using InvoiceReader.Application.UseCases;
+using Invoice.Application.UseCases;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace InvoiceReader.Application.Extensions;
+namespace Invoice.Application.Extensions;
 
 public static class ExtractFieldsExtensions
 {

@@ -6,17 +6,17 @@ PDF-Viewer Control für die Anzeige von PDF-Dateien mit PdfPig Rendering und Bou
 
 ## 1. PDF-Viewer Control Interface
 
-**Datei:** `src/InvoiceReader.WinForms/Controls/PdfViewerControl.cs`
+**Datei:** `src/Invoice.WinForms/Controls/PdfViewerControl.cs`
 
 ```csharp
-using InvoiceReader.Application.Interfaces;
+using Invoice.Application.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using UglyToad.PdfPig;
 using UglyToad.PdfPig.Content;
 using UglyToad.PdfPig.Graphics;
 
-namespace InvoiceReader.WinForms.Controls;
+namespace Invoice.WinForms.Controls;
 
 public partial class PdfViewerControl : UserControl
 {

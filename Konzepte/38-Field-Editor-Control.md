@@ -6,14 +6,14 @@ Field Editor Control für die Bearbeitung von extrahierten Feldern mit Kandidate
 
 ## 1. Field Editor Control Interface
 
-**Datei:** `src/InvoiceReader.WinForms/Controls/FieldEditorControl.cs`
+**Datei:** `src/Invoice.WinForms/Controls/FieldEditorControl.cs`
 
 ```csharp
-using InvoiceReader.Application.Interfaces;
+using Invoice.Application.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace InvoiceReader.WinForms.Controls;
+namespace Invoice.WinForms.Controls;
 
 public partial class FieldEditorControl : UserControl
 {

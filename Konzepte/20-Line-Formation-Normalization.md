@@ -6,10 +6,10 @@ Text-Normalisierung und intelligente Zeilen-Bildung für ML-Training und Feature
 
 ## 1. Text Normalization Interface
 
-**Datei:** `src/InvoiceReader.Application/Interfaces/ITextNormalizationService.cs`
+**Datei:** `src/Invoice.Application/Interfaces/ITextNormalizationService.cs`
 
 ```csharp
-namespace InvoiceReader.Application.Interfaces;
+namespace Invoice.Application.Interfaces;
 
 public interface ITextNormalizationService
 {
@@ -77,16 +77,16 @@ public class NormalizedWord
 
 ## 2. Text Normalization Implementation
 
-**Datei:** `src/InvoiceReader.Infrastructure/Services/TextNormalizationService.cs`
+**Datei:** `src/Invoice.Infrastructure/Services/TextNormalizationService.cs`
 
 ```csharp
-using InvoiceReader.Application.Interfaces;
+using Invoice.Application.Interfaces;
 using Microsoft.Extensions.Logging;
 using System.Globalization;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace InvoiceReader.Infrastructure.Services;
+namespace Invoice.Infrastructure.Services;
 
 public class TextNormalizationService : ITextNormalizationService
 {
@@ -576,13 +576,13 @@ public class TextNormalizationService : ITextNormalizationService
 
 ## 3. Text Normalization Extensions
 
-**Datei:** `src/InvoiceReader.Infrastructure/Extensions/TextNormalizationExtensions.cs`
+**Datei:** `src/Invoice.Infrastructure/Extensions/TextNormalizationExtensions.cs`
 
 ```csharp
-using InvoiceReader.Infrastructure.Services;
+using Invoice.Infrastructure.Services;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace InvoiceReader.Infrastructure.Extensions;
+namespace Invoice.Infrastructure.Extensions;
 
 public static class TextNormalizationExtensions
 {

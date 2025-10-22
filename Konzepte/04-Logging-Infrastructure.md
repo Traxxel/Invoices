@@ -6,7 +6,7 @@ Serilog-basierte Logging-Infrastructure für die gesamte Anwendung einrichten.
 
 ## 1. Serilog Configuration
 
-**Datei:** `src/InvoiceReader.Infrastructure/Logging/SerilogExtensions.cs`
+**Datei:** `src/Invoice.Infrastructure/Logging/SerilogExtensions.cs`
 
 ```csharp
 using Microsoft.Extensions.Configuration;
@@ -14,7 +14,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 
-namespace InvoiceReader.Infrastructure.Logging;
+namespace Invoice.Infrastructure.Logging;
 
 public static class SerilogExtensions
 {
@@ -39,10 +39,10 @@ public static class SerilogExtensions
 
 ## 2. Logging Service Interface
 
-**Datei:** `src/InvoiceReader.Infrastructure/Logging/ILoggingService.cs`
+**Datei:** `src/Invoice.Infrastructure/Logging/ILoggingService.cs`
 
 ```csharp
-namespace InvoiceReader.Infrastructure.Logging;
+namespace Invoice.Infrastructure.Logging;
 
 public interface ILoggingService
 {
@@ -62,12 +62,12 @@ public interface ILoggingService
 
 ## 3. Logging Service Implementation
 
-**Datei:** `src/InvoiceReader.Infrastructure/Logging/LoggingService.cs`
+**Datei:** `src/Invoice.Infrastructure/Logging/LoggingService.cs`
 
 ```csharp
 using Serilog;
 
-namespace InvoiceReader.Infrastructure.Logging;
+namespace Invoice.Infrastructure.Logging;
 
 public class LoggingService : ILoggingService
 {
@@ -153,12 +153,12 @@ public class LoggingService : ILoggingService
 
 ## 4. Structured Logging für Domain Events
 
-**Datei:** `src/InvoiceReader.Infrastructure/Logging/DomainEventLogger.cs`
+**Datei:** `src/Invoice.Infrastructure/Logging/DomainEventLogger.cs`
 
 ```csharp
 using Serilog;
 
-namespace InvoiceReader.Infrastructure.Logging;
+namespace Invoice.Infrastructure.Logging;
 
 public class DomainEventLogger
 {
@@ -197,13 +197,13 @@ public class DomainEventLogger
 
 ## 5. Performance Logging
 
-**Datei:** `src/InvoiceReader.Infrastructure/Logging/PerformanceLogger.cs`
+**Datei:** `src/Invoice.Infrastructure/Logging/PerformanceLogger.cs`
 
 ```csharp
 using System.Diagnostics;
 using Serilog;
 
-namespace InvoiceReader.Infrastructure.Logging;
+namespace Invoice.Infrastructure.Logging;
 
 public class PerformanceLogger
 {
@@ -246,14 +246,14 @@ public class PerformanceLogger
 
 ## 6. Service Registration
 
-**Datei:** `src/InvoiceReader.Infrastructure/Extensions/LoggingExtensions.cs`
+**Datei:** `src/Invoice.Infrastructure/Extensions/LoggingExtensions.cs`
 
 ```csharp
-using InvoiceReader.Infrastructure.Logging;
+using Invoice.Infrastructure.Logging;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
 
-namespace InvoiceReader.Infrastructure.Extensions;
+namespace Invoice.Infrastructure.Extensions;
 
 public static class LoggingExtensions
 {
@@ -270,16 +270,16 @@ public static class LoggingExtensions
 
 ## 7. Integration in Program.cs
 
-**Datei:** `src/InvoiceReader.WinForms/Program.cs` (Erweiterung)
+**Datei:** `src/Invoice.WinForms/Program.cs` (Erweiterung)
 
 ```csharp
-using InvoiceReader.Infrastructure.Extensions;
-using InvoiceReader.Infrastructure.Logging;
+using Invoice.Infrastructure.Extensions;
+using Invoice.Infrastructure.Logging;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace InvoiceReader.WinForms;
+namespace Invoice.WinForms;
 
 static class Program
 {

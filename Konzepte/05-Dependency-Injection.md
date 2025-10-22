@@ -6,19 +6,19 @@ Vollständige DI-Container-Konfiguration für alle Schichten der Anwendung.
 
 ## 1. Service Registration Extensions
 
-**Datei:** `src/InvoiceReader.Infrastructure/Extensions/ServiceCollectionExtensions.cs`
+**Datei:** `src/Invoice.Infrastructure/Extensions/ServiceCollectionExtensions.cs`
 
 ```csharp
-using InvoiceReader.Application.Interfaces;
-using InvoiceReader.Infrastructure.Configuration;
-using InvoiceReader.Infrastructure.Data;
-using InvoiceReader.Infrastructure.Logging;
-using InvoiceReader.Infrastructure.Services;
+using Invoice.Application.Interfaces;
+using Invoice.Infrastructure.Configuration;
+using Invoice.Infrastructure.Data;
+using Invoice.Infrastructure.Logging;
+using Invoice.Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace InvoiceReader.Infrastructure.Extensions;
+namespace Invoice.Infrastructure.Extensions;
 
 public static class ServiceCollectionExtensions
 {
@@ -55,16 +55,16 @@ public static class ServiceCollectionExtensions
 
 ## 2. Database Services
 
-**Datei:** `src/InvoiceReader.Infrastructure/Extensions/DatabaseExtensions.cs`
+**Datei:** `src/Invoice.Infrastructure/Extensions/DatabaseExtensions.cs`
 
 ```csharp
-using InvoiceReader.Infrastructure.Data;
-using InvoiceReader.Infrastructure.Data.Repositories;
+using Invoice.Infrastructure.Data;
+using Invoice.Infrastructure.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace InvoiceReader.Infrastructure.Extensions;
+namespace Invoice.Infrastructure.Extensions;
 
 public static class DatabaseExtensions
 {
@@ -88,14 +88,14 @@ public static class DatabaseExtensions
 
 ## 3. File Storage Services
 
-**Datei:** `src/InvoiceReader.Infrastructure/Extensions/FileStorageExtensions.cs`
+**Datei:** `src/Invoice.Infrastructure/Extensions/FileStorageExtensions.cs`
 
 ```csharp
-using InvoiceReader.Infrastructure.Services;
+using Invoice.Infrastructure.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace InvoiceReader.Infrastructure.Extensions;
+namespace Invoice.Infrastructure.Extensions;
 
 public static class FileStorageExtensions
 {
@@ -113,13 +113,13 @@ public static class FileStorageExtensions
 
 ## 4. PDF Processing Services
 
-**Datei:** `src/InvoiceReader.Infrastructure/Extensions/PdfProcessingExtensions.cs`
+**Datei:** `src/Invoice.Infrastructure/Extensions/PdfProcessingExtensions.cs`
 
 ```csharp
-using InvoiceReader.Infrastructure.Services;
+using Invoice.Infrastructure.Services;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace InvoiceReader.Infrastructure.Extensions;
+namespace Invoice.Infrastructure.Extensions;
 
 public static class PdfProcessingExtensions
 {
@@ -136,15 +136,15 @@ public static class PdfProcessingExtensions
 
 ## 5. ML Services
 
-**Datei:** `src/InvoiceReader.Infrastructure/Extensions/MLServicesExtensions.cs`
+**Datei:** `src/Invoice.Infrastructure/Extensions/MLServicesExtensions.cs`
 
 ```csharp
-using InvoiceReader.Infrastructure.ML;
-using InvoiceReader.Infrastructure.Services;
+using Invoice.Infrastructure.ML;
+using Invoice.Infrastructure.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace InvoiceReader.Infrastructure.Extensions;
+namespace Invoice.Infrastructure.Extensions;
 
 public static class MLServicesExtensions
 {
@@ -163,14 +163,14 @@ public static class MLServicesExtensions
 
 ## 6. Application Services
 
-**Datei:** `src/InvoiceReader.Application/Extensions/ApplicationServiceExtensions.cs`
+**Datei:** `src/Invoice.Application/Extensions/ApplicationServiceExtensions.cs`
 
 ```csharp
-using InvoiceReader.Application.Interfaces;
-using InvoiceReader.Application.UseCases;
+using Invoice.Application.Interfaces;
+using Invoice.Application.UseCases;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace InvoiceReader.Application.Extensions;
+namespace Invoice.Application.Extensions;
 
 public static class ApplicationServiceExtensions
 {
@@ -189,13 +189,13 @@ public static class ApplicationServiceExtensions
 
 ## 7. WinForms Services
 
-**Datei:** `src/InvoiceReader.WinForms/Extensions/WinFormsServiceExtensions.cs`
+**Datei:** `src/Invoice.WinForms/Extensions/WinFormsServiceExtensions.cs`
 
 ```csharp
-using InvoiceReader.WinForms.Forms;
+using Invoice.WinForms.Forms;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace InvoiceReader.WinForms.Extensions;
+namespace Invoice.WinForms.Extensions;
 
 public static class WinFormsServiceExtensions
 {
@@ -216,18 +216,18 @@ public static class WinFormsServiceExtensions
 
 ## 8. Vollständige Program.cs
 
-**Datei:** `src/InvoiceReader.WinForms/Program.cs`
+**Datei:** `src/Invoice.WinForms/Program.cs`
 
 ```csharp
-using InvoiceReader.Application.Extensions;
-using InvoiceReader.Infrastructure.Extensions;
-using InvoiceReader.WinForms.Extensions;
-using InvoiceReader.WinForms.Forms;
+using Invoice.Application.Extensions;
+using Invoice.Infrastructure.Extensions;
+using Invoice.WinForms.Extensions;
+using Invoice.WinForms.Forms;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace InvoiceReader.WinForms;
+namespace Invoice.WinForms;
 
 static class Program
 {
@@ -273,7 +273,7 @@ static class Program
 
 ## 9. Service Lifetime Guidelines
 
-**Datei:** `src/InvoiceReader.Infrastructure/Documentation/ServiceLifetimes.md`
+**Datei:** `src/Invoice.Infrastructure/Documentation/ServiceLifetimes.md`
 
 ```markdown
 # Service Lifetime Guidelines

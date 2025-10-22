@@ -6,10 +6,10 @@ File Storage Service für PDF-Dateien mit Guid-basierter Pfadlogik und Year/Mont
 
 ## 1. File Storage Interface
 
-**Datei:** `src/InvoiceReader.Application/Interfaces/IFileStorageService.cs`
+**Datei:** `src/Invoice.Application/Interfaces/IFileStorageService.cs`
 
 ```csharp
-namespace InvoiceReader.Application.Interfaces;
+namespace Invoice.Application.Interfaces;
 
 public interface IFileStorageService
 {
@@ -70,15 +70,15 @@ public class StorageStatistics
 
 ## 2. File Storage Implementation
 
-**Datei:** `src/InvoiceReader.Infrastructure/Services/FileStorageService.cs`
+**Datei:** `src/Invoice.Infrastructure/Services/FileStorageService.cs`
 
 ```csharp
-using InvoiceReader.Application.Interfaces;
-using InvoiceReader.Infrastructure.Configuration;
+using Invoice.Application.Interfaces;
+using Invoice.Infrastructure.Configuration;
 using Microsoft.Extensions.Options;
 using System.IO.Abstractions;
 
-namespace InvoiceReader.Infrastructure.Services;
+namespace Invoice.Infrastructure.Services;
 
 public class FileStorageService : IFileStorageService
 {
@@ -492,15 +492,15 @@ public class FileStorageService : IFileStorageService
 
 ## 3. File Storage Extensions
 
-**Datei:** `src/InvoiceReader.Infrastructure/Extensions/FileStorageExtensions.cs`
+**Datei:** `src/Invoice.Infrastructure/Extensions/FileStorageExtensions.cs`
 
 ```csharp
-using InvoiceReader.Infrastructure.Configuration;
-using InvoiceReader.Infrastructure.Services;
+using Invoice.Infrastructure.Configuration;
+using Invoice.Infrastructure.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace InvoiceReader.Infrastructure.Extensions;
+namespace Invoice.Infrastructure.Extensions;
 
 public static class FileStorageExtensions
 {

@@ -21,13 +21,13 @@ Dieses Konzept dient als **vollständige, feingliederige Vorlage**, damit eine K
 
 ## 3. Projektstruktur (Solution)
 ```
-InvoiceReader.sln
+Invoice.sln
 │
 ├─ src/
-│  ├─ InvoiceReader.WinForms/           # UI
-│  ├─ InvoiceReader.Application/        # UseCases/Ports
-│  ├─ InvoiceReader.Domain/             # Entities/VO/Policies
-│  └─ InvoiceReader.Infrastructure/     # EF/PDF/ML/FileStorage
+│  ├─ Invoice.WinForms/           # UI
+│  ├─ Invoice.Application/        # UseCases/Ports
+│  ├─ Invoice.Domain/             # Entities/VO/Policies
+│  └─ Invoice.Infrastructure/     # EF/PDF/ML/FileStorage
 │
 ├─ tools/                               # (leer; keine Python-Tools)
 ├─ data/
@@ -59,7 +59,7 @@ InvoiceReader.sln
 - **DbSets:** `Invoices`, `InvoiceRawBlocks`
 - **Fluent:** Decimal‑Präzision, Unique‑Index auf InvoiceNumber (optional, abhängig vom Use‑Case).
 - **ConnectionString (Beispiel):**
-  `Server=(localdb)\MSSQLLocalDB;Database=InvoiceReader;Trusted_Connection=True;TrustServerCertificate=True;`
+  `Server=(localdb)\MSSQLLocalDB;Database=Invoice;Trusted_Connection=True;TrustServerCertificate=True;`
 - **Migrationen:** beim App‑Start `Database.Migrate()`.
 
 ## 7. File‑Storage‑Strategie (PDFs)

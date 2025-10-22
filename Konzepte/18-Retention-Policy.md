@@ -6,10 +6,10 @@ Retention Policy Service für automatische Bereinigung alter Dateien und Datenba
 
 ## 1. Retention Policy Interface
 
-**Datei:** `src/InvoiceReader.Application/Interfaces/IRetentionPolicyService.cs`
+**Datei:** `src/Invoice.Application/Interfaces/IRetentionPolicyService.cs`
 
 ```csharp
-namespace InvoiceReader.Application.Interfaces;
+namespace Invoice.Application.Interfaces;
 
 public interface IRetentionPolicyService
 {
@@ -76,16 +76,16 @@ public class ExpiredItem
 
 ## 2. Retention Policy Implementation
 
-**Datei:** `src/InvoiceReader.Infrastructure/Services/RetentionPolicyService.cs`
+**Datei:** `src/Invoice.Infrastructure/Services/RetentionPolicyService.cs`
 
 ```csharp
-using InvoiceReader.Application.Interfaces;
-using InvoiceReader.Domain.Entities;
-using InvoiceReader.Infrastructure.Data;
+using Invoice.Application.Interfaces;
+using Invoice.Domain.Entities;
+using Invoice.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
-namespace InvoiceReader.Infrastructure.Services;
+namespace Invoice.Infrastructure.Services;
 
 public class RetentionPolicyService : IRetentionPolicyService
 {
@@ -528,13 +528,13 @@ public class RetentionPolicyService : IRetentionPolicyService
 
 ## 3. Retention Policy Extensions
 
-**Datei:** `src/InvoiceReader.Infrastructure/Extensions/RetentionPolicyExtensions.cs`
+**Datei:** `src/Invoice.Infrastructure/Extensions/RetentionPolicyExtensions.cs`
 
 ```csharp
-using InvoiceReader.Infrastructure.Services;
+using Invoice.Infrastructure.Services;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace InvoiceReader.Infrastructure.Extensions;
+namespace Invoice.Infrastructure.Extensions;
 
 public static class RetentionPolicyExtensions
 {

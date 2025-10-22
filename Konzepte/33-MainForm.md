@@ -6,15 +6,15 @@ MainForm für die Hauptansicht der Invoice Reader Anwendung mit Grid, Buttons un
 
 ## 1. MainForm Interface
 
-**Datei:** `src/InvoiceReader.WinForms/Forms/MainForm.cs`
+**Datei:** `src/Invoice.WinForms/Forms/MainForm.cs`
 
 ```csharp
-using InvoiceReader.Application.Interfaces;
-using InvoiceReader.Application.DTOs;
+using Invoice.Application.Interfaces;
+using Invoice.Application.DTOs;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace InvoiceReader.WinForms.Forms;
+namespace Invoice.WinForms.Forms;
 
 public partial class MainForm : Form
 {
@@ -805,13 +805,13 @@ public partial class MainForm : Form
 
 ## 2. MainForm Extensions
 
-**Datei:** `src/InvoiceReader.WinForms/Extensions/MainFormExtensions.cs`
+**Datei:** `src/Invoice.WinForms/Extensions/MainFormExtensions.cs`
 
 ```csharp
-using InvoiceReader.WinForms.Forms;
+using Invoice.WinForms.Forms;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace InvoiceReader.WinForms.Extensions;
+namespace Invoice.WinForms.Extensions;
 
 public static class MainFormExtensions
 {

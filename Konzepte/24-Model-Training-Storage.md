@@ -6,13 +6,13 @@ ML Model Training Service mit automatischer Speicherung und Versionierung der tr
 
 ## 1. Model Training Interface
 
-**Datei:** `src/InvoiceReader.Application/Interfaces/IModelTrainingService.cs`
+**Datei:** `src/Invoice.Application/Interfaces/IModelTrainingService.cs`
 
 ```csharp
 using Microsoft.ML;
 using Microsoft.ML.Data;
 
-namespace InvoiceReader.Application.Interfaces;
+namespace Invoice.Application.Interfaces;
 
 public interface IModelTrainingService
 {
@@ -200,18 +200,18 @@ public class AugmentationOptions
 
 ## 2. Model Training Implementation
 
-**Datei:** `src/InvoiceReader.Infrastructure/ML/Services/ModelTrainingService.cs`
+**Datei:** `src/Invoice.Infrastructure/ML/Services/ModelTrainingService.cs`
 
 ```csharp
 using Microsoft.ML;
 using Microsoft.ML.Data;
-using InvoiceReader.Application.Interfaces;
-using InvoiceReader.Infrastructure.ML.Models;
-using InvoiceReader.Infrastructure.ML.Converters;
+using Invoice.Application.Interfaces;
+using Invoice.Infrastructure.ML.Models;
+using Invoice.Infrastructure.ML.Converters;
 using Microsoft.Extensions.Logging;
 using System.Text.Json;
 
-namespace InvoiceReader.Infrastructure.ML.Services;
+namespace Invoice.Infrastructure.ML.Services;
 
 public class ModelTrainingService : IModelTrainingService
 {
@@ -812,13 +812,13 @@ public class ModelTrainingService : IModelTrainingService
 
 ## 3. Model Training Extensions
 
-**Datei:** `src/InvoiceReader.Infrastructure/ML/Extensions/ModelTrainingExtensions.cs`
+**Datei:** `src/Invoice.Infrastructure/ML/Extensions/ModelTrainingExtensions.cs`
 
 ```csharp
-using InvoiceReader.Infrastructure.ML.Services;
+using Invoice.Infrastructure.ML.Services;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace InvoiceReader.Infrastructure.ML.Extensions;
+namespace Invoice.Infrastructure.ML.Extensions;
 
 public static class ModelTrainingExtensions
 {

@@ -6,10 +6,10 @@ PdfPig-basierte PDF-Parsing-Integration für Text-Extraktion und Layout-Informat
 
 ## 1. PDF Parser Interface
 
-**Datei:** `src/InvoiceReader.Application/Interfaces/IPdfParserService.cs`
+**Datei:** `src/Invoice.Application/Interfaces/IPdfParserService.cs`
 
 ```csharp
-namespace InvoiceReader.Application.Interfaces;
+namespace Invoice.Application.Interfaces;
 
 public interface IPdfParserService
 {
@@ -175,10 +175,10 @@ public class Image
 
 ## 2. PDF Parser Implementation
 
-**Datei:** `src/InvoiceReader.Infrastructure/Services/PdfPigParserService.cs`
+**Datei:** `src/Invoice.Infrastructure/Services/PdfPigParserService.cs`
 
 ```csharp
-using InvoiceReader.Application.Interfaces;
+using Invoice.Application.Interfaces;
 using Microsoft.Extensions.Logging;
 using UglyToad.PdfPig;
 using UglyToad.PdfPig.Content;
@@ -186,7 +186,7 @@ using UglyToad.PdfPig.DocumentLayoutAnalysis;
 using UglyToad.PdfPig.Graphics;
 using UglyToad.PdfPig.Writer;
 
-namespace InvoiceReader.Infrastructure.Services;
+namespace Invoice.Infrastructure.Services;
 
 public class PdfPigParserService : IPdfParserService
 {
@@ -689,13 +689,13 @@ public class PdfPigParserService : IPdfParserService
 
 ## 3. PDF Parser Extensions
 
-**Datei:** `src/InvoiceReader.Infrastructure/Extensions/PdfParserExtensions.cs`
+**Datei:** `src/Invoice.Infrastructure/Extensions/PdfParserExtensions.cs`
 
 ```csharp
-using InvoiceReader.Infrastructure.Services;
+using Invoice.Infrastructure.Services;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace InvoiceReader.Infrastructure.Extensions;
+namespace Invoice.Infrastructure.Extensions;
 
 public static class PdfParserExtensions
 {

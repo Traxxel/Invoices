@@ -6,10 +6,10 @@ File Hash Service für Integritätsprüfung und Duplikat-Erkennung von PDF-Datei
 
 ## 1. File Hash Interface
 
-**Datei:** `src/InvoiceReader.Application/Interfaces/IFileHashService.cs`
+**Datei:** `src/Invoice.Application/Interfaces/IFileHashService.cs`
 
 ```csharp
-namespace InvoiceReader.Application.Interfaces;
+namespace Invoice.Application.Interfaces;
 
 public interface IFileHashService
 {
@@ -56,15 +56,15 @@ public class HashStatistics
 
 ## 2. File Hash Implementation
 
-**Datei:** `src/InvoiceReader.Infrastructure/Services/FileHashService.cs`
+**Datei:** `src/Invoice.Infrastructure/Services/FileHashService.cs`
 
 ```csharp
-using InvoiceReader.Application.Interfaces;
+using Invoice.Application.Interfaces;
 using Microsoft.Extensions.Logging;
 using System.IO.Abstractions;
 using System.Security.Cryptography;
 
-namespace InvoiceReader.Infrastructure.Services;
+namespace Invoice.Infrastructure.Services;
 
 public class FileHashService : IFileHashService
 {
@@ -536,13 +536,13 @@ public class FileHashService : IFileHashService
 
 ## 3. File Hash Extensions
 
-**Datei:** `src/InvoiceReader.Infrastructure/Extensions/FileHashExtensions.cs`
+**Datei:** `src/Invoice.Infrastructure/Extensions/FileHashExtensions.cs`
 
 ```csharp
-using InvoiceReader.Infrastructure.Services;
+using Invoice.Infrastructure.Services;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace InvoiceReader.Infrastructure.Extensions;
+namespace Invoice.Infrastructure.Extensions;
 
 public static class FileHashExtensions
 {

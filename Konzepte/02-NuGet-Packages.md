@@ -5,14 +5,14 @@ Alle erforderlichen NuGet-Pakete für die 4 Projekte gemäß Konzept definieren.
 
 ## NuGet-Pakete nach Projekt
 
-### 1. InvoiceReader.Domain
+### 1. Invoice.Domain
 **Keine externen Pakete** - reine Domain-Logik
 
-### 2. InvoiceReader.Application
+### 2. Invoice.Application
 **Keine externen Pakete** - nur Domain-Referenz
 
-### 3. InvoiceReader.Infrastructure
-**Datei:** `src/InvoiceReader.Infrastructure/InvoiceReader.Infrastructure.csproj`
+### 3. Invoice.Infrastructure
+**Datei:** `src/Invoice.Infrastructure/Invoice.Infrastructure.csproj`
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -23,8 +23,8 @@ Alle erforderlichen NuGet-Pakete für die 4 Projekte gemäß Konzept definieren.
   </PropertyGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\InvoiceReader.Domain\InvoiceReader.Domain.csproj" />
-    <ProjectReference Include="..\InvoiceReader.Application\InvoiceReader.Application.csproj" />
+    <ProjectReference Include="..\Invoice.Domain\Invoice.Domain.csproj" />
+    <ProjectReference Include="..\Invoice.Application\Invoice.Application.csproj" />
   </ItemGroup>
   
   <ItemGroup>
@@ -63,8 +63,8 @@ Alle erforderlichen NuGet-Pakete für die 4 Projekte gemäß Konzept definieren.
 </Project>
 ```
 
-### 4. InvoiceReader.WinForms
-**Datei:** `src/InvoiceReader.WinForms/InvoiceReader.WinForms.csproj`
+### 4. Invoice.WinForms
+**Datei:** `src/Invoice.WinForms/Invoice.WinForms.csproj`
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -77,7 +77,7 @@ Alle erforderlichen NuGet-Pakete für die 4 Projekte gemäß Konzept definieren.
   </PropertyGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\InvoiceReader.Application\InvoiceReader.Application.csproj" />
+    <ProjectReference Include="..\Invoice.Application\Invoice.Application.csproj" />
   </ItemGroup>
   
   <ItemGroup>

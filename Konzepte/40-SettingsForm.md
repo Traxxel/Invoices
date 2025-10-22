@@ -6,14 +6,14 @@ SettingsForm für die Konfiguration von Pfaden, Datenbankverbindung und anderen 
 
 ## 1. SettingsForm Interface
 
-**Datei:** `src/InvoiceReader.WinForms/Forms/SettingsForm.cs`
+**Datei:** `src/Invoice.WinForms/Forms/SettingsForm.cs`
 
 ```csharp
-using InvoiceReader.Application.Interfaces;
+using Invoice.Application.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace InvoiceReader.WinForms.Forms;
+namespace Invoice.WinForms.Forms;
 
 public partial class SettingsForm : Form
 {
@@ -858,15 +858,15 @@ public class ApplicationSettings
     public string Theme { get; set; } = "Light";
 
     public string DatabaseConnectionString { get; set; } = "";
-    public string DatabaseName { get; set; } = "InvoiceReader";
+    public string DatabaseName { get; set; } = "Invoice";
     public string DatabaseServer { get; set; } = "localhost";
     public string DatabaseUsername { get; set; } = "";
     public string DatabasePassword { get; set; } = "";
     public bool DatabaseIntegratedSecurity { get; set; } = true;
 
-    public string DataPath { get; set; } = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "InvoiceReader", "Data");
-    public string ModelsPath { get; set; } = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "InvoiceReader", "Models");
-    public string LogsPath { get; set; } = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "InvoiceReader", "Logs");
+    public string DataPath { get; set; } = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Invoice", "Data");
+    public string ModelsPath { get; set; } = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Invoice", "Models");
+    public string LogsPath { get; set; } = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Invoice", "Logs");
     public string TempPath { get; set; } = Path.GetTempPath();
 
     public string DefaultAlgorithm { get; set; } = "SdcaMaximumEntropy";

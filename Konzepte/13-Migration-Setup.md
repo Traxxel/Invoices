@@ -6,14 +6,14 @@ EF Core Migration-Setup mit Initial Migration und automatischer Migration beim A
 
 ## 1. Initial Migration
 
-**Datei:** `src/InvoiceReader.Infrastructure/Data/Migrations/InitialCreate.cs`
+**Datei:** `src/Invoice.Infrastructure/Data/Migrations/InitialCreate.cs`
 
 ```csharp
 using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace InvoiceReader.Infrastructure.Data.Migrations
+namespace Invoice.Infrastructure.Data.Migrations
 {
     /// <inheritdoc />
     public partial class InitialCreate : Migration
@@ -198,14 +198,14 @@ namespace InvoiceReader.Infrastructure.Data.Migrations
 
 ## 2. Migration Service
 
-**Datei:** `src/InvoiceReader.Infrastructure/Data/Services/MigrationService.cs`
+**Datei:** `src/Invoice.Infrastructure/Data/Services/MigrationService.cs`
 
 ```csharp
-using InvoiceReader.Infrastructure.Data;
+using Invoice.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
-namespace InvoiceReader.Infrastructure.Data.Services;
+namespace Invoice.Infrastructure.Data.Services;
 
 public interface IMigrationService
 {
@@ -342,16 +342,16 @@ public class MigrationService : IMigrationService
 
 ## 3. Migration Startup
 
-**Datei:** `src/InvoiceReader.Infrastructure/Data/Services/MigrationStartupService.cs`
+**Datei:** `src/Invoice.Infrastructure/Data/Services/MigrationStartupService.cs`
 
 ```csharp
-using InvoiceReader.Infrastructure.Data;
-using InvoiceReader.Infrastructure.Data.Services;
+using Invoice.Infrastructure.Data;
+using Invoice.Infrastructure.Data.Services;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace InvoiceReader.Infrastructure.Data.Services;
+namespace Invoice.Infrastructure.Data.Services;
 
 public interface IMigrationStartupService
 {
@@ -431,13 +431,13 @@ public class MigrationStartupService : IMigrationStartupService
 
 ## 4. Migration Extensions
 
-**Datei:** `src/InvoiceReader.Infrastructure/Data/Extensions/MigrationExtensions.cs`
+**Datei:** `src/Invoice.Infrastructure/Data/Extensions/MigrationExtensions.cs`
 
 ```csharp
-using InvoiceReader.Infrastructure.Data.Services;
+using Invoice.Infrastructure.Data.Services;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace InvoiceReader.Infrastructure.Data.Extensions;
+namespace Invoice.Infrastructure.Data.Extensions;
 
 public static class MigrationExtensions
 {
@@ -453,20 +453,20 @@ public static class MigrationExtensions
 
 ## 5. Program.cs Integration
 
-**Datei:** `src/InvoiceReader.WinForms/Program.cs` (Erweiterung)
+**Datei:** `src/Invoice.WinForms/Program.cs` (Erweiterung)
 
 ```csharp
-using InvoiceReader.Application.Extensions;
-using InvoiceReader.Infrastructure.Data.Extensions;
-using InvoiceReader.Infrastructure.Data.Services;
-using InvoiceReader.Infrastructure.Extensions;
-using InvoiceReader.WinForms.Extensions;
-using InvoiceReader.WinForms.Forms;
+using Invoice.Application.Extensions;
+using Invoice.Infrastructure.Data.Extensions;
+using Invoice.Infrastructure.Data.Services;
+using Invoice.Infrastructure.Extensions;
+using Invoice.WinForms.Extensions;
+using Invoice.WinForms.Forms;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace InvoiceReader.WinForms;
+namespace Invoice.WinForms;
 
 static class Program
 {

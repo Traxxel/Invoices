@@ -6,13 +6,13 @@ Prediction Engine Service für ML-Model Loading und Real-time Predictions mit Co
 
 ## 1. Prediction Engine Interface
 
-**Datei:** `src/InvoiceReader.Application/Interfaces/IPredictionEngineService.cs`
+**Datei:** `src/Invoice.Application/Interfaces/IPredictionEngineService.cs`
 
 ```csharp
 using Microsoft.ML;
 using Microsoft.ML.Data;
 
-namespace InvoiceReader.Application.Interfaces;
+namespace Invoice.Application.Interfaces;
 
 public interface IPredictionEngineService
 {
@@ -148,18 +148,18 @@ public class PerformanceMetric
 
 ## 2. Prediction Engine Implementation
 
-**Datei:** `src/InvoiceReader.Infrastructure/ML/Services/PredictionEngineService.cs`
+**Datei:** `src/Invoice.Infrastructure/ML/Services/PredictionEngineService.cs`
 
 ```csharp
 using Microsoft.ML;
 using Microsoft.ML.Data;
-using InvoiceReader.Application.Interfaces;
-using InvoiceReader.Infrastructure.ML.Models;
-using InvoiceReader.Infrastructure.ML.Converters;
+using Invoice.Application.Interfaces;
+using Invoice.Infrastructure.ML.Models;
+using Invoice.Infrastructure.ML.Converters;
 using Microsoft.Extensions.Logging;
 using System.Text.Json;
 
-namespace InvoiceReader.Infrastructure.ML.Services;
+namespace Invoice.Infrastructure.ML.Services;
 
 public class PredictionEngineService : IPredictionEngineService
 {
@@ -878,13 +878,13 @@ public class PredictionEngineService : IPredictionEngineService
 
 ## 3. Prediction Engine Extensions
 
-**Datei:** `src/InvoiceReader.Infrastructure/ML/Extensions/PredictionEngineExtensions.cs`
+**Datei:** `src/Invoice.Infrastructure/ML/Extensions/PredictionEngineExtensions.cs`
 
 ```csharp
-using InvoiceReader.Infrastructure.ML.Services;
+using Invoice.Infrastructure.ML.Services;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace InvoiceReader.Infrastructure.ML.Extensions;
+namespace Invoice.Infrastructure.ML.Extensions;
 
 public static class PredictionEngineExtensions
 {

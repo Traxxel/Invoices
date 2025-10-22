@@ -6,12 +6,12 @@ ML.NET DataView Schema für InputRow mit allen Features für ML-Training und Pre
 
 ## 1. InputRow Data Model
 
-**Datei:** `src/InvoiceReader.Infrastructure/ML/Models/InputRow.cs`
+**Datei:** `src/Invoice.Infrastructure/ML/Models/InputRow.cs`
 
 ```csharp
 using Microsoft.ML.Data;
 
-namespace InvoiceReader.Infrastructure.ML.Models;
+namespace Invoice.Infrastructure.ML.Models;
 
 public class InputRow
 {
@@ -279,14 +279,14 @@ public class InputRowFeatures
 
 ## 2. DataView Schema Configuration
 
-**Datei:** `src/InvoiceReader.Infrastructure/ML/Configuration/DataViewSchemaConfiguration.cs`
+**Datei:** `src/Invoice.Infrastructure/ML/Configuration/DataViewSchemaConfiguration.cs`
 
 ```csharp
 using Microsoft.ML;
 using Microsoft.ML.Data;
-using InvoiceReader.Infrastructure.ML.Models;
+using Invoice.Infrastructure.ML.Models;
 
-namespace InvoiceReader.Infrastructure.ML.Configuration;
+namespace Invoice.Infrastructure.ML.Configuration;
 
 public static class DataViewSchemaConfiguration
 {
@@ -422,15 +422,15 @@ public static class DataViewSchemaConfiguration
 
 ## 3. DataView Converter
 
-**Datei:** `src/InvoiceReader.Infrastructure/ML/Converters/DataViewConverter.cs`
+**Datei:** `src/Invoice.Infrastructure/ML/Converters/DataViewConverter.cs`
 
 ```csharp
 using Microsoft.ML;
 using Microsoft.ML.Data;
-using InvoiceReader.Infrastructure.ML.Models;
-using InvoiceReader.Application.Interfaces;
+using Invoice.Infrastructure.ML.Models;
+using Invoice.Application.Interfaces;
 
-namespace InvoiceReader.Infrastructure.ML.Converters;
+namespace Invoice.Infrastructure.ML.Converters;
 
 public class DataViewConverter
 {
@@ -615,14 +615,14 @@ public class DataViewConverter
 
 ## 4. DataView Extensions
 
-**Datei:** `src/InvoiceReader.Infrastructure/ML/Extensions/DataViewExtensions.cs`
+**Datei:** `src/Invoice.Infrastructure/ML/Extensions/DataViewExtensions.cs`
 
 ```csharp
 using Microsoft.ML;
 using Microsoft.ML.Data;
-using InvoiceReader.Infrastructure.ML.Models;
+using Invoice.Infrastructure.ML.Models;
 
-namespace InvoiceReader.Infrastructure.ML.Extensions;
+namespace Invoice.Infrastructure.ML.Extensions;
 
 public static class DataViewExtensions
 {
