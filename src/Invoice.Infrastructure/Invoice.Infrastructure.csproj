@@ -15,7 +15,8 @@
     <PackageReference Include="Microsoft.ML" Version="3.0.1" />
     
     <!-- PDF Processing -->
-    <PackageReference Include="UglyToad.PdfPig" Version="0.1.9" />
+    <!-- <PackageReference Include="UglyToad.PdfPig" Version="0.1.8" /> -->
+    <!-- PdfPig wird später hinzugefügt, wenn PDF-Processing implementiert wird -->
     
     <!-- Entity Framework Core -->
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
@@ -31,6 +32,9 @@
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
+    
+    <!-- Health Checks -->
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks" Version="8.0.0" />
     
     <!-- Logging -->
     <PackageReference Include="Serilog" Version="4.0.0" />
