@@ -15,8 +15,6 @@
     <PackageReference Include="Microsoft.ML" Version="3.0.1" />
     
     <!-- PDF Processing -->
-    <!-- <PackageReference Include="UglyToad.PdfPig" Version="0.1.8" /> -->
-    <!-- PdfPig wird später hinzugefügt, wenn PDF-Processing implementiert wird -->
     
     <!-- Entity Framework Core -->
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
@@ -45,6 +43,7 @@
     
     <!-- File System -->
     <PackageReference Include="System.IO.Abstractions" Version="19.1.1" />
+    <PackageReference Include="UglyToad.PdfPig" Version="1.7.0-custom-5" />
   </ItemGroup>
 </Project>
 
