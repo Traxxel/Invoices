@@ -6,12 +6,32 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="DevExpress.Win.Design" Version="25.1.5" />
-  </ItemGroup>
   
   <ItemGroup>
     <ProjectReference Include="..\Invoice.Application\Invoice.Application.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <!-- DevExpress WinForms Components -->
+    <PackageReference Include="DevExpress.Win.Design" Version="25.1.5" />
+    <PackageReference Include="DevExpress.Win.Grid" Version="25.1.5" />
+    <PackageReference Include="DevExpress.Win.Navigation" Version="25.1.5" />
+    <PackageReference Include="DevExpress.Win.PdfViewer" Version="25.1.5" />
+    
+    <!-- WinForms Controls -->
+    <PackageReference Include="System.Windows.Forms" Version="8.0.0" />
+    
+    <!-- Configuration -->
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+    
+    <!-- Logging -->
+    <PackageReference Include="Serilog" Version="4.0.0" />
+    <PackageReference Include="Serilog.Extensions.Hosting" Version="8.0.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="5.0.1" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
   </ItemGroup>
 </Project>
 
