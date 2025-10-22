@@ -37,18 +37,11 @@ public class FirstRunService : IFirstRunService
     {
         try
         {
-            _logger.LogInformation("Starting first-run initialization...");
+            _logger.LogInformation("Starting database initialization...");
 
             using var scope = _serviceProvider.CreateScope();
 
-            // Check if this is a first run
-            if (!await IsFirstRunAsync())
-            {
-                _logger.LogInformation("Not a first run, skipping initialization");
-                return true;
-            }
-
-            // Initialize database
+            // ALWAYS initialize database and apply migrations
             var migrationStartupService = scope.ServiceProvider.GetRequiredService<IMigrationStartupService>();
             if (!await migrationStartupService.InitializeDatabaseAsync())
             {
@@ -56,20 +49,32 @@ public class FirstRunService : IFirstRunService
                 return false;
             }
 
-            // Seed database
-            var databaseSeeder = scope.ServiceProvider.GetRequiredService<IDatabaseSeeder>();
-            if (!await databaseSeeder.SeedAsync())
+            // Check if this is a first run for seeding
+            var isFirstRun = await IsFirstRunAsync();
+            if (isFirstRun)
             {
-                _logger.LogError("Failed to seed database");
-                return false;
+                _logger.LogInformation("First run detected, seeding database...");
+                
+                // Seed database only on first run
+                var databaseSeeder = scope.ServiceProvider.GetRequiredService<IDatabaseSeeder>();
+                if (!await databaseSeeder.SeedAsync())
+                {
+                    _logger.LogError("Failed to seed database");
+                    return false;
+                }
+                
+                _logger.LogInformation("First-run initialization completed successfully");
+            }
+            else
+            {
+                _logger.LogInformation("Database initialization completed (not first run, skipping seeding)");
             }
 
-            _logger.LogInformation("First-run initialization completed successfully");
             return true;
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "First-run initialization failed");
+            _logger.LogError(ex, "Database initialization failed");
             return false;
         }
     }
