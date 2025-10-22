@@ -12,19 +12,27 @@
   </ItemGroup>
   
   <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="appsettings.Development.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  
+  <ItemGroup>
     <!-- DevExpress WinForms Components -->
     <PackageReference Include="DevExpress.Win.Design" Version="25.1.5" />
     <PackageReference Include="DevExpress.Win.Grid" Version="25.1.5" />
     <PackageReference Include="DevExpress.Win.Navigation" Version="25.1.5" />
     <PackageReference Include="DevExpress.Win.PdfViewer" Version="25.1.5" />
     
-    <!-- WinForms Controls -->
-    <PackageReference Include="System.Windows.Forms" Version="8.0.0" />
+    <!-- WinForms Controls nicht erforderlich - bereits durch SDK verfügbar -->
     
     <!-- Configuration -->
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.1" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
     
     <!-- Logging -->
