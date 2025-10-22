@@ -1,5 +1,9 @@
 # Aufgabe 38: Field Editor Control (Kandidaten-Dropdown)
 
+## ⚠️ WICHTIG: DevExpress-Komponenten verwenden!
+**Alle Standard-WinForms-Komponenten müssen durch DevExpress-Äquivalente ersetzt werden!**
+Siehe: `Konzepte/DEVEXPRESS_MAPPING.md` für Details.
+
 ## Ziel
 
 Field Editor Control für die Bearbeitung von extrahierten Feldern mit Kandidaten-Dropdown und Alternativen.

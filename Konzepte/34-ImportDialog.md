@@ -1,5 +1,9 @@
 # Aufgabe 34: ImportDialog (File Picker, Progress)
 
+## ⚠️ WICHTIG: DevExpress-Komponenten verwenden!
+**Alle Standard-WinForms-Komponenten müssen durch DevExpress-Äquivalente ersetzt werden!**
+Siehe: `Konzepte/DEVEXPRESS_MAPPING.md` für Details.
+
 ## Ziel
 
 ImportDialog für die Auswahl von PDF-Dateien und Anzeige des Import-Fortschritts mit DevExpress-Komponenten.

@@ -1,5 +1,9 @@
 # Aufgabe 36: ReviewForm (Layout: PDF links, Felder rechts)
 
+## ⚠️ WICHTIG: DevExpress-Komponenten verwenden!
+**Alle Standard-WinForms-Komponenten müssen durch DevExpress-Äquivalente ersetzt werden!**
+Siehe: `Konzepte/DEVEXPRESS_MAPPING.md` für Details.
+
 ## Ziel
 
 ReviewForm für die Überprüfung und Bearbeitung von extrahierten Rechnungsfeldern mit PDF-Viewer links und Feldeditor rechts.

@@ -1,5 +1,9 @@
 # Aufgabe 35: BatchImportDialog (Multi-File, Status List)
 
+## ⚠️ WICHTIG: DevExpress-Komponenten verwenden!
+**Alle Standard-WinForms-Komponenten müssen durch DevExpress-Äquivalente ersetzt werden!**
+Siehe: `Konzepte/DEVEXPRESS_MAPPING.md` für Details.
+
 ## Ziel
 
 BatchImportDialog für den Import mehrerer PDF-Dateien mit detaillierter Status-Liste.

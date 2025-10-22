@@ -1,5 +1,9 @@
 # Aufgabe 40: SettingsForm (Pfade, DB-Connection)
 
+## ⚠️ WICHTIG: DevExpress-Komponenten verwenden!
+**Alle Standard-WinForms-Komponenten müssen durch DevExpress-Äquivalente ersetzt werden!**
+Siehe: `Konzepte/DEVEXPRESS_MAPPING.md` für Details.
+
 ## Ziel
 
 SettingsForm für die Konfiguration von Pfaden, Datenbankverbindung und anderen Anwendungseinstellungen.

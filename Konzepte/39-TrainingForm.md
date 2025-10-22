@@ -1,5 +1,9 @@
 # Aufgabe 39: TrainingForm (Labeling Grid)
 
+## ⚠️ WICHTIG: DevExpress-Komponenten verwenden!
+**Alle Standard-WinForms-Komponenten müssen durch DevExpress-Äquivalente ersetzt werden!**
+Siehe: `Konzepte/DEVEXPRESS_MAPPING.md` für Details.
+
 ## Ziel
 
 TrainingForm für das Labeling von Trainingsdaten mit Grid-basierter Eingabe und ML-Modelltraining.

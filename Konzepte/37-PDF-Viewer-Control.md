@@ -1,5 +1,9 @@
 # Aufgabe 37: PDF-Viewer Control (DevExpress PdfViewer)
 
+## ⚠️ WICHTIG: DevExpress-Komponenten verwenden!
+**Alle Standard-WinForms-Komponenten müssen durch DevExpress-Äquivalente ersetzt werden!**
+Siehe: `Konzepte/DEVEXPRESS_MAPPING.md` für Details.
+
 ## Ziel
 
 PDF-Viewer Control für die Anzeige von PDF-Dateien mit DevExpress PdfViewer und Bounding Box Highlighting.
