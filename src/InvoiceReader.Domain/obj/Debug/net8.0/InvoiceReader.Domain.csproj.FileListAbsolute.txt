@@ -1,0 +1,12 @@
+C:\Users\MeyerStefan\source\repos\Traxxel@github\Invoices\src\InvoiceReader.Domain\bin\Debug\net8.0\InvoiceReader.Domain.deps.json
+C:\Users\MeyerStefan\source\repos\Traxxel@github\Invoices\src\InvoiceReader.Domain\bin\Debug\net8.0\InvoiceReader.Domain.dll
+C:\Users\MeyerStefan\source\repos\Traxxel@github\Invoices\src\InvoiceReader.Domain\bin\Debug\net8.0\InvoiceReader.Domain.pdb
+C:\Users\MeyerStefan\source\repos\Traxxel@github\Invoices\src\InvoiceReader.Domain\obj\Debug\net8.0\InvoiceReader.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MeyerStefan\source\repos\Traxxel@github\Invoices\src\InvoiceReader.Domain\obj\Debug\net8.0\InvoiceReader.Domain.AssemblyInfoInputs.cache
+C:\Users\MeyerStefan\source\repos\Traxxel@github\Invoices\src\InvoiceReader.Domain\obj\Debug\net8.0\InvoiceReader.Domain.AssemblyInfo.cs
+C:\Users\MeyerStefan\source\repos\Traxxel@github\Invoices\src\InvoiceReader.Domain\obj\Debug\net8.0\InvoiceReader.Domain.csproj.CoreCompileInputs.cache
+C:\Users\MeyerStefan\source\repos\Traxxel@github\Invoices\src\InvoiceReader.Domain\obj\Debug\net8.0\InvoiceReader.Domain.sourcelink.json
+C:\Users\MeyerStefan\source\repos\Traxxel@github\Invoices\src\InvoiceReader.Domain\obj\Debug\net8.0\InvoiceReader.Domain.dll
+C:\Users\MeyerStefan\source\repos\Traxxel@github\Invoices\src\InvoiceReader.Domain\obj\Debug\net8.0\refint\InvoiceReader.Domain.dll
+C:\Users\MeyerStefan\source\repos\Traxxel@github\Invoices\src\InvoiceReader.Domain\obj\Debug\net8.0\InvoiceReader.Domain.pdb
+C:\Users\MeyerStefan\source\repos\Traxxel@github\Invoices\src\InvoiceReader.Domain\obj\Debug\net8.0\ref\InvoiceReader.Domain.dll
