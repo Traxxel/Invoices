@@ -17,13 +17,7 @@ public static class ServiceCollectionExtensions
         services.AddDatabase(configuration);
 
         // File Storage
-        services.AddFileStorage(configuration);
-
-        // PDF Processing
-        services.AddPdfProcessing();
-
-        // ML Services
-        services.AddMLServices(configuration);
+        services.AddFileStorage();
 
         return services;
     }
