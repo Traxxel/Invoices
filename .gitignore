@@ -423,3 +423,7 @@ $RECYCLE.BIN/
 
 # Cursor AI Rules (project-specific)
 .cursorrules
+
+# NuGet Configuration (contains private DevExpress feed)
+nuget.config
+NuGet.config
