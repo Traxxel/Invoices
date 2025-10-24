@@ -47,6 +47,15 @@ public record TrainingResponse(
     List<string> Warnings
 );
 
+public record TrainingResult(
+    bool Success,
+    string Message,
+    string? ModelPath,
+    object? Metrics,
+    TimeSpan TrainingTime,
+    DateTime TrainedAt
+);
+
 public record TrainingMetrics(
     float Accuracy,
     float MicroF1Score,

@@ -24,7 +24,7 @@ public interface IPredictionEngineService
     Task<BatchPredictionResult> PredictBatchAsync(List<NormalizedTextLine> textLines);
 
     // Model information
-    Task<ModelInfo> GetModelInfoAsync(string version = null);
+    Task<TrainingModelInfo> GetModelInfoAsync(string version = null);
     Task<ModelPerformance> GetModelPerformanceAsync();
     Task<bool> IsModelLoadedAsync();
     Task<DateTime> GetModelLoadTimeAsync();

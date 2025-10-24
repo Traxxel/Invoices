@@ -68,3 +68,23 @@ public record ConfidenceScore(
     DateTime CalculatedAt
 );
 
+public class ModelInfo
+{
+    public string ModelName { get; set; } = string.Empty;
+    public string Version { get; set; } = string.Empty;
+    public string FilePath { get; set; } = string.Empty;
+    public long FileSize { get; set; }
+    public DateTime CreatedAt { get; set; }
+    public DateTime LastUsedAt { get; set; }
+    public int TrainingDataCount { get; set; }
+    public int TestDataCount { get; set; }
+    public List<string> FieldTypes { get; set; } = new();
+    public float Accuracy { get; set; }
+    public float Precision { get; set; }
+    public float Recall { get; set; }
+    public float F1Score { get; set; }
+    public bool IsLoaded { get; set; }
+    public bool IsActive { get; set; }
+    public Dictionary<string, object> Metadata { get; set; } = new();
+}
+

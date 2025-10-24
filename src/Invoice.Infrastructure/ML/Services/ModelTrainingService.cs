@@ -258,11 +258,11 @@ public class ModelTrainingService : IModelTrainingService
         }
     }
 
-    public async Task<List<ModelInfo>> GetAvailableModelsAsync()
+    public async Task<List<TrainingModelInfo>> GetAvailableModelsAsync()
     {
         try
         {
-            var models = new List<ModelInfo>();
+            var models = new List<TrainingModelInfo>();
             var modelsDirectory = Path.Combine("data", "models");
 
             if (!Directory.Exists(modelsDirectory))
@@ -278,7 +278,7 @@ public class ModelTrainingService : IModelTrainingService
                 var version = fileName.Replace("model_", "");
                 var metadataPath = Path.Combine(modelsDirectory, $"metadata_{version}.json");
 
-                var modelInfo = new ModelInfo
+                var modelInfo = new TrainingModelInfo
                 {
                     Version = version,
                     Name = $"Model {version}",
@@ -318,7 +318,7 @@ public class ModelTrainingService : IModelTrainingService
         catch (Exception ex)
         {
             _logger.LogError(ex, "Failed to get available models");
-            return new List<ModelInfo>();
+            return new List<TrainingModelInfo>();
         }
     }
 

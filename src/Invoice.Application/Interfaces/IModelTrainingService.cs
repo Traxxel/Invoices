@@ -14,7 +14,7 @@ public interface IModelTrainingService
     // Model management
     Task<bool> SaveModelAsync(ITransformer model, string version, ModelMetadata metadata);
     Task<ITransformer> LoadModelAsync(string version);
-    Task<List<ModelInfo>> GetAvailableModelsAsync();
+    Task<List<TrainingModelInfo>> GetAvailableModelsAsync();
     Task<bool> DeleteModelAsync(string version);
     Task<bool> SetActiveModelAsync(string version);
 
@@ -113,7 +113,7 @@ public class ModelMetadata
     public string FilePath { get; set; } = string.Empty;
 }
 
-public class ModelInfo
+public class TrainingModelInfo
 {
     public string Version { get; set; } = string.Empty;
     public string Name { get; set; } = string.Empty;

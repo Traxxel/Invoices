@@ -41,6 +41,30 @@ public static class DtoExtensions
         );
     }
 
+    public static Domain.Entities.Invoice ToEntity(this InvoiceDto dto)
+    {
+        var entity = Domain.Entities.Invoice.Create(
+            dto.InvoiceNumber,
+            dto.InvoiceDate,
+            dto.IssuerName,
+            dto.NetTotal,
+            dto.VatTotal,
+            dto.GrossTotal,
+            dto.SourceFilePath,
+            dto.ExtractionConfidence,
+            dto.ModelVersion
+        );
+        
+        entity.Id = dto.Id;
+        entity.IssuerStreet = dto.IssuerStreet;
+        entity.IssuerPostalCode = dto.IssuerPostalCode;
+        entity.IssuerCity = dto.IssuerCity;
+        entity.IssuerCountry = dto.IssuerCountry;
+        entity.ImportedAt = dto.ImportedAt;
+        
+        return entity;
+    }
+
     public static List<InvoiceDto> ToDtoList(this List<Domain.Entities.Invoice> invoices)
     {
         return invoices.Select(i => i.ToDto()).ToList();

@@ -25,8 +25,8 @@ namespace Invoice.WinForms
         private readonly IInvoiceRepository _invoiceRepository;
         private readonly IImportInvoiceUseCase _importInvoiceUseCase;
         private readonly ISaveInvoiceUseCase _saveInvoiceUseCase;
-        private readonly IExtractFieldsUseCase _extractFieldsUseCase;
-        private readonly ITrainModelsUseCase _trainModelsUseCase;
+        // private readonly IExtractFieldsUseCase _extractFieldsUseCase;
+        // private readonly ITrainModelsUseCase _trainModelsUseCase;
 
         // Data
         private List<InvoiceDto> _invoices;
@@ -40,8 +40,8 @@ namespace Invoice.WinForms
             _invoiceRepository = serviceProvider.GetRequiredService<IInvoiceRepository>();
             _importInvoiceUseCase = serviceProvider.GetRequiredService<IImportInvoiceUseCase>();
             _saveInvoiceUseCase = serviceProvider.GetRequiredService<ISaveInvoiceUseCase>();
-            _extractFieldsUseCase = serviceProvider.GetRequiredService<IExtractFieldsUseCase>();
-            _trainModelsUseCase = serviceProvider.GetRequiredService<ITrainModelsUseCase>();
+            // _extractFieldsUseCase = serviceProvider.GetRequiredService<IExtractFieldsUseCase>();
+            // _trainModelsUseCase = serviceProvider.GetRequiredService<ITrainModelsUseCase>();
 
             _invoices = new List<InvoiceDto>();
             _filteredInvoices = new List<InvoiceDto>();

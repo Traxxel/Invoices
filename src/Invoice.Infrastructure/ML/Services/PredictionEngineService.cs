@@ -357,7 +357,7 @@ public class PredictionEngineService : IPredictionEngineService
         }
     }
 
-    public async Task<ModelInfo> GetModelInfoAsync(string version = null)
+    public async Task<TrainingModelInfo> GetModelInfoAsync(string version = null)
     {
         try
         {
@@ -365,7 +365,7 @@ public class PredictionEngineService : IPredictionEngineService
 
             if (string.IsNullOrEmpty(targetVersion))
             {
-                return new ModelInfo();
+                return new TrainingModelInfo();
             }
 
             var metadataPath = Path.Combine("data", "models", $"metadata_{targetVersion}.json");
@@ -373,7 +373,7 @@ public class PredictionEngineService : IPredictionEngineService
             if (!File.Exists(metadataPath))
             {
                 _logger.LogWarning("Metadata file not found: {MetadataPath}", metadataPath);
-                return new ModelInfo { Version = targetVersion };
+                return new TrainingModelInfo { Version = targetVersion };
             }
 
             var metadataJson = await File.ReadAllTextAsync(metadataPath);
@@ -381,10 +381,10 @@ public class PredictionEngineService : IPredictionEngineService
 
             if (metadata == null)
             {
-                return new ModelInfo { Version = targetVersion };
+                return new TrainingModelInfo { Version = targetVersion };
             }
 
-            return new ModelInfo
+            return new TrainingModelInfo
             {
                 Version = metadata.Version,
                 Name = metadata.Name,
@@ -401,7 +401,7 @@ public class PredictionEngineService : IPredictionEngineService
         catch (Exception ex)
         {
             _logger.LogError(ex, "Failed to get model info: {Version}", version);
-            return new ModelInfo();
+            return new TrainingModelInfo();
         }
     }
 
